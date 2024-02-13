@@ -27,10 +27,10 @@ namespace ProjectHearthaven.Character
             for (int i = 0; i < _animators.Length; i++)
             {
                 Vector2 movement = new(_inputReader.MoveInput.x, _inputReader.MoveInput.y);
-                _rb.velocity = movement * _walkSpeed;
+                _rb.MovePosition(_rb.position + _walkSpeed * Time.fixedDeltaTime * movement);
 
-                _animators[i].SetFloat("move x", _rb.velocity.x);
-                _animators[i].SetFloat("move y", _rb.velocity.y);
+                _animators[i].SetFloat("move x", _inputReader.MoveInput.x);
+                _animators[i].SetFloat("move y", _inputReader.MoveInput.y);
             }
         }
     }

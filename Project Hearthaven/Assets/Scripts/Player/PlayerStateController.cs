@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace ProjectHearthaven.Player
 {
-    [AddComponentMenu("Player/State Controller")]
+    [AddComponentMenu("Player/Player State Controller")]
     [RequireComponent(typeof(CharacterMove))]
     public class PlayerStateController : MonoBehaviour
     {
