@@ -1,46 +1,62 @@
-using System;
-using System.Linq;
+using System.Collections.Generic;
 using ProjectHearthaven.Inventory;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace ProjectHearthaven.Character
 {
+    [AddComponentMenu("Character/Character Inventory")]
     public class CharacterInventory : MonoBehaviour
     {
-        [SerializeField, TableList]
-        private InventorySlot[] _inventorySlots;
+        public float CurrentCarryingWeight
+        {
+            get => _currentCarryingWeight;
+            set =>
+                _currentCarryingWeight = (
+                    value <= 0
+                        ? 0
+                        : value >= _maxCarryingWeight
+                            ? _maxCarryingWeight
+                            : value
+                );
+        }
+
+        [BoxGroup("Settings"), Range(0, 20), SuffixLabel("kg"), SerializeField]
+        private float _maxCarryingWeight;
+
+        [BoxGroup("Items"), SerializeField, TableList]
+        private List<ItemSO> _items;
+
+        private float _currentCarryingWeight;
 
         public void AddItem(ItemSO item, int amount)
         {
-            if (HasItem(item, out InventorySlot inventorySlot))
+            for (int i = 0; i < amount; i++)
             {
-                inventorySlot.AddAmount(amount);
-            }
-            else
-            {
-                GetEmptyInventorySlot().SetItem(item, amount);
+                _items.Add(item);
+
+                CurrentCarryingWeight += item.weight;
             }
         }
 
         public void RemoveItem(ItemSO item, int amount)
         {
-            if (HasItem(item, out InventorySlot inventorySlot))
+            for (int i = 0; i < amount; i++)
             {
-                inventorySlot.RemoveAmount(amount);
+                _items.Remove(item);
+
+                CurrentCarryingWeight -= item.weight;
             }
         }
 
-        public bool HasItem(ItemSO item, out InventorySlot inventorySlot)
+        public bool HasItem(ItemSO item)
         {
-            inventorySlot = Array.Find(_inventorySlots, i => i.Item == item);
-
-            return inventorySlot != null;
+            return _items.Find(i => i == item);
         }
 
-        public InventorySlot GetEmptyInventorySlot()
+        public bool CanAddItem(ItemSO item)
         {
-            return _inventorySlots.First(i => i.Item == null);
+            return (CurrentCarryingWeight + item.weight) <= _maxCarryingWeight;
         }
     }
 }
