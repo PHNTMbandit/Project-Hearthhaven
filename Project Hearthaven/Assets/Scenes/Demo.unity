@@ -573,6 +573,7 @@ GameObject:
   - component: {fileID: 266420238}
   - component: {fileID: 266420234}
   - component: {fileID: 266420236}
+  - component: {fileID: 266420243}
   - component: {fileID: 266420235}
   - component: {fileID: 266420242}
   - component: {fileID: 266420241}
@@ -872,6 +873,19 @@ MonoBehaviour:
     prependActorNameSeparator: ': '
     prependActorNameFormat: '{0}{1}'
     subtitleColor: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &266420243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266420231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64bada9c355f013418451fb8b851fcb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inventorySlots: []
 --- !u!1 &348599613
 GameObject:
   m_ObjectHideFlags: 0
