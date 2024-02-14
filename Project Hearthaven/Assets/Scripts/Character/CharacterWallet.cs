@@ -1,5 +1,6 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ProjectHearthaven.Character
 {
@@ -22,14 +23,20 @@ namespace ProjectHearthaven.Character
 
         private int _dollars;
 
+        public UnityAction onWalletChanged;
+
         public void AddDollars(int amount)
         {
             _dollars += amount;
+
+            onWalletChanged?.Invoke();
         }
 
         public void RemoveDollars(int amount)
         {
             _dollars -= amount;
+
+            onWalletChanged?.Invoke();
         }
 
         public bool CanTransfer(int amount)

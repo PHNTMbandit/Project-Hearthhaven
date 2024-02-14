@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using ProjectHearthaven.Inventory;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ProjectHearthaven.Character
 {
@@ -29,6 +30,8 @@ namespace ProjectHearthaven.Character
 
         private float _currentCarryingWeight;
 
+        public UnityAction onInventoryChanged;
+
         public void AddItem(ItemSO item, int amount)
         {
             for (int i = 0; i < amount; i++)
@@ -37,6 +40,8 @@ namespace ProjectHearthaven.Character
 
                 CurrentCarryingWeight += item.weight;
             }
+
+            onInventoryChanged?.Invoke();
         }
 
         public void RemoveItem(ItemSO item, int amount)
@@ -47,6 +52,8 @@ namespace ProjectHearthaven.Character
 
                 CurrentCarryingWeight -= item.weight;
             }
+
+            onInventoryChanged?.Invoke();
         }
 
         public bool HasItem(ItemSO item)
