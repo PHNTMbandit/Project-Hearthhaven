@@ -13,13 +13,12 @@ namespace ProjectHearthaven.Character
         {
             get => _currentCarryingWeight;
             set =>
-                _currentCarryingWeight = (
+                _currentCarryingWeight =
                     value <= 0
                         ? 0
                         : value >= _maxCarryingWeight
                             ? _maxCarryingWeight
-                            : value
-                );
+                            : value;
         }
 
         [BoxGroup("Settings"), Range(0, 20), SuffixLabel("kg"), SerializeField]
@@ -38,7 +37,7 @@ namespace ProjectHearthaven.Character
             {
                 _items.Add(item);
 
-                CurrentCarryingWeight += item.weight;
+                UpdateCarryingWeight();
             }
 
             onInventoryChanged?.Invoke();
@@ -50,10 +49,22 @@ namespace ProjectHearthaven.Character
             {
                 _items.Remove(item);
 
-                CurrentCarryingWeight -= item.weight;
+                UpdateCarryingWeight();
             }
 
             onInventoryChanged?.Invoke();
+        }
+
+        private void UpdateCarryingWeight()
+        {
+            float weight = 0;
+
+            for (int i = 0; i < _items.Count; i++)
+            {
+                weight += _items[i].weight;
+            }
+
+            CurrentCarryingWeight = weight;
         }
 
         public bool HasItem(ItemSO item)
