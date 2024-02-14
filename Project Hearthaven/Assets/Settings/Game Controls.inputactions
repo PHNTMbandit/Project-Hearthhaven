@@ -6,13 +6,13 @@
             "id": "607ac14c-ba36-4444-b140-e621a7b3318f",
             "actions": [
                 {
-                    "name": "Move",
-                    "type": "Value",
-                    "id": "ce9950e4-eb21-4c56-8841-f240c94f98e2",
-                    "expectedControlType": "Vector2",
+                    "name": "Continue",
+                    "type": "Button",
+                    "id": "b0993d10-499e-4d8a-b7f7-e00d2117a3c0",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Interact",
@@ -22,6 +22,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "ce9950e4-eb21-4c56-8841-f240c94f98e2",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -209,6 +218,28 @@
                     "processors": "",
                     "groups": "Joystick",
                     "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5d1bfe12-1248-483b-b4d2-bb8acfdd33b2",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Continue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eaa82560-9e8a-4374-8916-1709bf9b9397",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Continue",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
