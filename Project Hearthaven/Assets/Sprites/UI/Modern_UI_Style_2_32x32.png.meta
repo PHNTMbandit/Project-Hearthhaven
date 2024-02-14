@@ -182,7 +182,7 @@ TextureImporter:
         height: 44
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 2, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -1667,10 +1667,10 @@ TextureImporter:
       name: Modern_UI_Style_2_32x32_95
       rect:
         serializedVersion: 2
-        x: 544
-        y: 992
-        width: 32
-        height: 32
+        x: 552
+        y: 1000
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2030,7 +2030,7 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 26, y: 4, z: 20, w: 4}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2213,13 +2213,13 @@ TextureImporter:
       name: Modern_UI_Style_2_32x32_131
       rect:
         serializedVersion: 2
-        x: 544
-        y: 960
-        width: 32
-        height: 32
+        x: 554
+        y: 966
+        width: 12
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 4, y: 6, z: 4, w: 4}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2969,13 +2969,13 @@ TextureImporter:
       name: Modern_UI_Style_2_32x32_175
       rect:
         serializedVersion: 2
-        x: 608
-        y: 864
-        width: 32
-        height: 96
+        x: 618
+        y: 894
+        width: 10
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 2, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -2990,13 +2990,13 @@ TextureImporter:
       name: Modern_UI_Style_2_32x32_176
       rect:
         serializedVersion: 2
-        x: 640
-        y: 864
-        width: 32
-        height: 96
+        x: 650
+        y: 894
+        width: 10
+        height: 36
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 2, y: 2, z: 2, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -6140,13 +6140,13 @@ TextureImporter:
       name: Modern_UI_Style_2_32x32_413
       rect:
         serializedVersion: 2
-        x: 0
+        x: 18
         y: 672
-        width: 96
-        height: 64
+        width: 60
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 10, y: 2, z: 8, w: 14}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -7253,13 +7253,13 @@ TextureImporter:
       name: Modern_UI_Style_2_32x32_494
       rect:
         serializedVersion: 2
-        x: 96
-        y: 544
-        width: 96
-        height: 96
+        x: 120
+        y: 568
+        width: 48
+        height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 6, y: 6, z: 6, w: 8}
       outline: []
       physicsShape: []
       tessellationDetail: 0
