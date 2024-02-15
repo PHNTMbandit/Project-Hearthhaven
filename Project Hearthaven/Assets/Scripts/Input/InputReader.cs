@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 [CreateAssetMenu(fileName = "Input Reader", menuName = "Input/Input Reader")]
@@ -6,6 +7,9 @@ public class InputReader : ScriptableObject, GameControls.IPlayerActions
 {
     public GameControls GameControls { get; private set; }
     public Vector2 MoveInput { get; private set; }
+
+    public UnityAction onContinue,
+        onInteract;
 
     private void OnEnable()
     {
@@ -17,6 +21,22 @@ public class InputReader : ScriptableObject, GameControls.IPlayerActions
     private void OnDisable()
     {
         EnableGameplayInput(false);
+    }
+
+    public void OnContinue(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            onContinue?.Invoke();
+        }
+    }
+
+    public void OnInteract(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            onInteract?.Invoke();
+        }
     }
 
     public void OnMove(InputAction.CallbackContext context)
