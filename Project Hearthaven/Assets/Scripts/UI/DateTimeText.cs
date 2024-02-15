@@ -6,7 +6,8 @@ namespace ProjectHearthaven.UI
     public class DateTimeText : MonoBehaviour
     {
         [SerializeField]
-        private TextMeshProUGUI _text;
+        private TextMeshProUGUI _timeText,
+            _dateText;
 
         [SerializeField]
         private DayNightCycleController _dayNightCycle;
@@ -23,7 +24,8 @@ namespace ProjectHearthaven.UI
 
         private void UpdateUI()
         {
-            _text.SetText(_dayNightCycle.CurrentTime.ToString("G"));
+            _timeText.SetText($"<sprite name=Clock> {_dayNightCycle.CurrentTime:h:mm tt}");
+            _dateText.SetText(_dayNightCycle.CurrentTime.ToString("ddd d MMM y"));
         }
     }
 }

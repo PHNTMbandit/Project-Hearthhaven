@@ -7,7 +7,9 @@ namespace ProjectHearthaven.Character
     [AddComponentMenu("Character/Character Wallet")]
     public class CharacterWallet : MonoBehaviour
     {
-        [ShowInInspector, ReadOnly]
+        [SerializeField, Range(0, 10000), SuffixLabel("dollars")]
+        private int _dollars;
+
         public int Dollars
         {
             get => _dollars;
@@ -20,8 +22,6 @@ namespace ProjectHearthaven.Character
                             : value
                 );
         }
-
-        private int _dollars;
 
         public UnityAction onWalletChanged;
 

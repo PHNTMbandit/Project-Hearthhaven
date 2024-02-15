@@ -113,13 +113,13 @@ TextureImporter:
       name: Modern_UI_Style_2_32x32_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 16
         y: 1024
-        width: 96
+        width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 10, y: 12, z: 10, w: 14}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -222,8 +222,8 @@ TextureImporter:
         y: 1056
         width: 32
         height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
