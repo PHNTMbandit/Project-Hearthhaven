@@ -326,9 +326,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -4
+  m_SortingLayerID: -1661329299
+  m_SortingLayer: -1
+  m_SortingOrder: -3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -8552,7 +8552,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 0000000015bcc772
+  m_ApplyToSortingLayers: 0000000015bcc7726d20fa9c
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -8731,6 +8731,63 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &833965431
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2480923513692231845, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
+      propertyPath: m_Name
+      value: Train 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217199545686783209, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217199545686783209, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.9998999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217199545686783209, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217199545686783209, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217199545686783209, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217199545686783209, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217199545686783209, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217199545686783209, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217199545686783209, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4217199545686783209, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
 --- !u!1 &1031398810 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6410951295254889740, guid: bc05fdd3279530847abcdb606547a283, type: 3}
@@ -8795,9 +8852,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingLayerID: -1661329299
+  m_SortingLayer: -1
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -12141,9 +12198,9 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -3
+  m_SortingLayerID: -1661329299
+  m_SortingLayer: -1
+  m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -13306,6 +13363,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4229158608394503457, guid: bc05fdd3279530847abcdb606547a283, type: 3}
+      propertyPath: Circle.Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4229158608394503457, guid: bc05fdd3279530847abcdb606547a283, type: 3}
+      propertyPath: DetectsOnLayers.m_Bits
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4697657664774489378, guid: bc05fdd3279530847abcdb606547a283, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -13382,3 +13447,4 @@ SceneRoots:
   - {fileID: 2656683583423160034}
   - {fileID: 189400877}
   - {fileID: 215111819}
+  - {fileID: 833965431}
