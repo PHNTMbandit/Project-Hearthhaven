@@ -13343,10 +13343,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1211480535766268332, guid: bc05fdd3279530847abcdb606547a283, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.174
-      objectReference: {fileID: 0}
     - target: {fileID: 3554382741119788663, guid: bc05fdd3279530847abcdb606547a283, type: 3}
       propertyPath: m_Camera
       value: 
@@ -13358,30 +13354,6 @@ PrefabInstance:
     - target: {fileID: 3773726513736863238, guid: bc05fdd3279530847abcdb606547a283, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 3773726513736863238, guid: bc05fdd3279530847abcdb606547a283, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229158608394503457, guid: bc05fdd3279530847abcdb606547a283, type: 3}
-      propertyPath: Circle.Radius
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4229158608394503457, guid: bc05fdd3279530847abcdb606547a283, type: 3}
-      propertyPath: DetectsOnLayers.m_Bits
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697657664774489378, guid: bc05fdd3279530847abcdb606547a283, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: -1270028366, guid: 1de0d645dc2ca0d4f8168071214e0c89, type: 3}
-    - target: {fileID: 4697657664774489378, guid: bc05fdd3279530847abcdb606547a283, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5133599183667915337, guid: bc05fdd3279530847abcdb606547a283, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6566727372842973157, guid: bc05fdd3279530847abcdb606547a283, type: 3}
       propertyPath: m_Camera

@@ -1,4 +1,4 @@
-namespace ProjectHearthaven.Train.States
+namespace ProjectHearthaven.Vehicles.Train.States
 {
     public class TrainDepartingState : TrainState
     {
@@ -9,9 +9,9 @@ namespace ProjectHearthaven.Train.States
         {
             base.OnEnter();
 
-            for (int i = 0; i < stateController.Animators.Length; i++)
+            for (int i = 0; i < stateController.Doors.Length; i++)
             {
-                stateController.Animators[i].SetTrigger("close");
+                stateController.Doors[i].Close();
             }
         }
     }

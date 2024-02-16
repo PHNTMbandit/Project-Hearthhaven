@@ -1,15 +1,17 @@
 using DG.Tweening;
-using ProjectHearthaven.Train.States;
+using ProjectHearthaven.Vehicles.Train.States;
+using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 
-namespace ProjectHearthaven.Train
+namespace ProjectHearthaven.Vehicles.Train
 {
     public class TrainStateController : MonoBehaviour
     {
-        [field: SerializeField]
-        public Animator[] Animators { get; private set; }
+        [field: BoxGroup("Animations"), SerializeField]
+        public TrainDoor[] Doors { get; private set; }
 
-        [field: SerializeField]
+        [field: BoxGroup("Animations"), SerializeField]
         public DOTweenAnimation ArriveAnimation { get; private set; }
 
         public TrainStateMachine StateMachine { get; private set; }

@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,7 +7,7 @@ namespace ProjectHearthaven.Capabilities
     [AddComponentMenu("Capabilities/Interactable")]
     public class Interactable : MonoBehaviour
     {
-        [field: SerializeField]
+        [field: PreviewField(Alignment = ObjectFieldAlignment.Left), SerializeField]
         public Sprite InteractSprite { get; private set; }
 
         public UnityEvent onDetected,

@@ -1,4 +1,4 @@
-namespace ProjectHearthaven.Train.States
+namespace ProjectHearthaven.Vehicles.Train.States
 {
     public class TrainArrivingState : TrainState
     {
