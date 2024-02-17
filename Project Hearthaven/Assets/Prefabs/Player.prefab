@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 618023056450765974}
   - component: {fileID: 3554382741119788663}
   - component: {fileID: 9041686510773564855}
+  - component: {fileID: 550624149281699869}
   - component: {fileID: 2973528922902092108}
   - component: {fileID: 2563067977497552310}
   - component: {fileID: 7268891944131221727}
@@ -334,6 +335,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <InputReader>k__BackingField: {fileID: 11400000, guid: dca32dc5366dd5842a68e4823dd59439, type: 2}
+--- !u!114 &550624149281699869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3773726513736863238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a26f775ed6ba15748980f84723e8f975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHunger: 1000
+  _currentHunger: 1000
 --- !u!114 &2973528922902092108
 MonoBehaviour:
   m_ObjectHideFlags: 0

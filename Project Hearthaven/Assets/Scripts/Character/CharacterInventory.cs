@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using ProjectHearthaven.Inventory;
+using ProjectHearthaven.Items;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
