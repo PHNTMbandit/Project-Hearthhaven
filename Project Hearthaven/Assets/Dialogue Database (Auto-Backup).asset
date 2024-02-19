@@ -70,7 +70,7 @@ MonoBehaviour:
     - title: Description
       value: 
       type: 0
-      typeString: 
+      typeString: CustomFieldType_Text
     - title: IsPlayer
       value: False
       type: 2
@@ -221,7 +221,9 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: Hi how are you doing?
+        value: Hi how are you doing? Hi how are you doing? Hi how are you doing?
+          Hi how are you doing? Hi how are you doing? Hi how are you doing? Hi how
+          are you doing? Hi how are you doing?
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -256,7 +258,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 162
-        y: 150
+        y: 149
         width: 160
         height: 30
     - id: 2

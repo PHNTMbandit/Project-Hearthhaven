@@ -18,12 +18,16 @@ MonoBehaviour:
   m_TilingRules:
   - m_Id: 0
     m_Sprites:
-    - {fileID: -186405982, guid: c0206b6bd230c4342862967f4464086d, type: 3}
+    - {fileID: 296790098, guid: c0206b6bd230c4342862967f4464086d, type: 3}
+    - {fileID: 296790098, guid: c0206b6bd230c4342862967f4464086d, type: 3}
+    - {fileID: 214315666, guid: c0206b6bd230c4342862967f4464086d, type: 3}
+    - {fileID: -1693313378, guid: c0206b6bd230c4342862967f4464086d, type: 3}
+    - {fileID: -1189737616, guid: c0206b6bd230c4342862967f4464086d, type: 3}
     m_GameObject: {fileID: 0}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
     m_PerlinScale: 0.5
-    m_Output: 0
+    m_Output: 1
     m_ColliderType: 0
     m_RandomTransform: 0
     m_Neighbors: 0000000000000000000000000000000000000000000000000000000000000000
@@ -296,7 +300,7 @@ MonoBehaviour:
   customProperties: []
   m_ExtendedTilingRules: []
   m_ExtraTilingRules:
-  - m_ExtendedOutputSprite: 0
+  - m_ExtendedOutputSprite: 1
     m_Patternsize: {x: 1, y: 1}
   - m_ExtendedOutputSprite: 0
     m_Patternsize: {x: 1, y: 1}
@@ -332,14 +336,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7c9615a5cbd6b740a310c57c8d53257, type: 3}
-  m_Name: Yellow Line Rule Tile
+  m_Name: Ground Rule Tile
   m_EditorClassIdentifier: 
   settings:
     _gridShape: 0
-    _zoomAmount: 0.61802036
+    _zoomAmount: 1.6061469
     _gridCellSize: {x: 32, y: 32}
     _tileRenderOffset: {x: 0, y: 0}
-    _gridOffset: {x: -169.16467, y: 145.80606}
+    _gridOffset: {x: -921.136, y: 27.854279}
     _lockWindows: 1
     _hideSprites: 0
     _showRuler: 1
@@ -1089,18 +1093,22 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 27, y: 6}
-    Sprite: {fileID: -186405982, guid: c0206b6bd230c4342862967f4464086d, type: 3}
-    TileID: -3
-    UseDefaultSettings: 1
-    IsModified: 0
+    Sprite: {fileID: 296790098, guid: c0206b6bd230c4342862967f4464086d, type: 3}
+    TileID: 1
+    UseDefaultSettings: 0
+    IsModified: 1
     Locked: 0
     _overrideUniversalSpriteSettings: 0
     GameObject: {fileID: 0}
-    Sprites: []
-    ColliderType: 1
+    Sprites:
+    - {fileID: 296790098, guid: c0206b6bd230c4342862967f4464086d, type: 3}
+    - {fileID: 214315666, guid: c0206b6bd230c4342862967f4464086d, type: 3}
+    - {fileID: -1693313378, guid: c0206b6bd230c4342862967f4464086d, type: 3}
+    - {fileID: -1189737616, guid: c0206b6bd230c4342862967f4464086d, type: 3}
+    ColliderType: 0
     OutputSprite: 1
     Transform: 0
-    IncludeSpriteInOutput: 0
+    IncludeSpriteInOutput: 1
     NoiseScale: 0.5
     RandomTransform: 0
     MinAnimationSpeed: 1
