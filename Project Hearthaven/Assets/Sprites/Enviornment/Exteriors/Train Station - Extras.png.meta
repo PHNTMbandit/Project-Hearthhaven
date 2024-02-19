@@ -114,7 +114,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -134,8 +134,8 @@ TextureImporter:
       name: Train Station - Extras_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 0
+        x: 48
+        y: 32
         width: 16
         height: 16
       alignment: 0
@@ -155,8 +155,8 @@ TextureImporter:
       name: Train Station - Extras_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
+        x: 0
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -177,7 +177,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 48
-        y: 0
+        y: 16
         width: 16
         height: 16
       alignment: 0
@@ -197,7 +197,7 @@ TextureImporter:
       name: Train Station - Extras_4
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 0
         width: 16
         height: 16
@@ -210,6 +210,90 @@ TextureImporter:
       bones: []
       spriteID: 5ffbb07465f8c4c41a5b70d3be5657e6
       internalID: -210290567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Train Station - Extras_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfdfbb408be424b4d8fb3ebd5f48cf1f
+      internalID: -188754645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Train Station - Extras_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d770b86ce46d5d8448e04d856cd6a840
+      internalID: -1875106651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Train Station - Extras_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f07a929ebe123a4a9be73a3ae7fa1e8
+      internalID: 370818050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Train Station - Extras_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158e5c86ce12a564ba191a1e5e044689
+      internalID: -753708421
       vertices: []
       indices: 
       edges: []
@@ -230,6 +314,10 @@ TextureImporter:
       Train Station - Extras_2: -2080241469
       Train Station - Extras_3: 1448150871
       Train Station - Extras_4: -210290567
+      Train Station - Extras_5: -188754645
+      Train Station - Extras_6: -1875106651
+      Train Station - Extras_7: 370818050
+      Train Station - Extras_8: -753708421
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
