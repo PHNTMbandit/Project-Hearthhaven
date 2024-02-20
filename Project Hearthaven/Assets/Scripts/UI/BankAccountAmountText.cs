@@ -1,30 +1,26 @@
 using ProjectHearthaven.Character;
-using TMPro;
 using UnityEngine;
 
 namespace ProjectHearthaven.UI
 {
+    [RequireComponent(typeof(TextCounter))]
     public class BankAccountAmountText : MonoBehaviour
     {
         [SerializeField]
-        private TextMeshProUGUI _amountText;
-
-        [SerializeField]
         private CharacterBankAccount _bankAccount;
+
+        private TextCounter _textCounter;
 
         private void Awake()
         {
-            _bankAccount.onBankAccountChanged += UpdateUI;
-        }
+            _textCounter = GetComponent<TextCounter>();
 
-        private void Start()
-        {
-            UpdateUI();
+            _bankAccount.onBankAccountChanged += UpdateUI;
         }
 
         private void UpdateUI()
         {
-            _amountText.SetText($"<sprite name=Small Coin> {_bankAccount.Dollars:C0}");
+            _textCounter.SetTarget(_bankAccount.Dollars);
         }
     }
 }
