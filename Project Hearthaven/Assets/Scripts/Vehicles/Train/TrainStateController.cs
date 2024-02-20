@@ -14,10 +14,14 @@ namespace ProjectHearthaven.Vehicles.Train
         [field: BoxGroup("Animations"), SerializeField]
         public DOTweenAnimation ArriveAnimation { get; private set; }
 
+        [field: BoxGroup("Animations"), SerializeField]
+        public DOTweenAnimation DepartingAnimation { get; private set; }
+
         public TrainStateMachine StateMachine { get; private set; }
         public TrainArrivingState ArrivingState { get; private set; }
         public TrainArrivedState ArrivedState { get; private set; }
         public TrainDepartingState DepartingState { get; private set; }
+        public TrainWaitingState WaitingState { get; private set; }
 
         private void Awake()
         {
@@ -26,11 +30,12 @@ namespace ProjectHearthaven.Vehicles.Train
             ArrivingState = new(this);
             ArrivedState = new(this);
             DepartingState = new(this);
+            WaitingState = new(this);
         }
 
         private void Start()
         {
-            StateMachine.Initialise(ArrivingState);
+            StateMachine.Initialise(WaitingState);
         }
 
         private void Update()
@@ -41,6 +46,16 @@ namespace ProjectHearthaven.Vehicles.Train
         private void FixedUpdate()
         {
             StateMachine.CurrentState.OnFixedUpdate();
+        }
+
+        public void CallTrain()
+        {
+            StateMachine.ChangeState(ArrivingState);
+        }
+
+        public void DepartTrain()
+        {
+            StateMachine.ChangeState(DepartingState);
         }
     }
 }

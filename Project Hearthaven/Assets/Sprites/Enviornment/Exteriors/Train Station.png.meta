@@ -7378,9 +7378,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 400
-        y: 2720
+        y: 2704
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -7852,27 +7852,6 @@ TextureImporter:
       bones: []
       spriteID: 39185bed397d7144794b9f665dd71969
       internalID: 1938782450
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Train Station_366
-      rect:
-        serializedVersion: 2
-        x: 400
-        y: 2704
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c6d1551e2275a24aa9e8867a62e928e
-      internalID: 1338123999
       vertices: []
       indices: 
       edges: []
@@ -8911,14 +8890,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 2656
-        width: 16
-        height: 16
+        y: 2640
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -10, y: -16}
+        - {x: -10, y: -3}
+        - {x: 10, y: -3}
+        - {x: 10, y: -16}
       tessellationDetail: 0
       bones: []
       spriteID: d88aab31fd57d674cb9f6c9013d7ec65
@@ -8928,36 +8911,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Train Station_417
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 2656
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a5522954ac909b54eb35185f38d4aa85
-      internalID: 344107149
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Train Station_418
       rect:
         serializedVersion: 2
         x: 96
-        y: 2656
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 2640
+        width: 32
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -8970,39 +8932,22 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Train Station_419
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 2656
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2bcb57b5c54c6c24b94381c5cb9b2499
-      internalID: 982369085
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Train Station_420
       rect:
         serializedVersion: 2
         x: 128
-        y: 2656
+        y: 2640
         width: 16
-        height: 16
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -4, y: -16}
+        - {x: -4, y: -2}
+        - {x: 5, y: -2}
+        - {x: 5, y: -16}
       tessellationDetail: 0
       bones: []
       spriteID: eed24ede43bad0f42ac1adfef14a6a51
@@ -9322,69 +9267,6 @@ TextureImporter:
       bones: []
       spriteID: 259fa05ce4276bb40be38825126a2153
       internalID: -1247297675
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Train Station_436
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 2640
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da694ef94811dba419f9eb7ec540a67c
-      internalID: -1000569532
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Train Station_439
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 2640
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2597bbcbbc09c1944a2548911909b2e4
-      internalID: -1755673692
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Train Station_440
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 2640
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e774f6ef8831a5342898d41b1de93ae5
-      internalID: 1871479381
       vertices: []
       indices: 
       edges: []
@@ -10426,9 +10308,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2608
+        y: 2560
         width: 16
-        height: 16
+        height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -10978,27 +10860,6 @@ TextureImporter:
       bones: []
       spriteID: 251cee6bba874cc4aafd0cca2cc9dca2
       internalID: 499483961
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Train Station_515
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2592
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4b5b37a6173f9c41b83afd4112756c7
-      internalID: 965630220
       vertices: []
       indices: 
       edges: []
@@ -11634,27 +11495,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Train Station_546
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2576
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b0198d232f6a0504cb2c9e7546a081e2
-      internalID: -1150245051
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Train Station_547
       rect:
         serializedVersion: 2
@@ -12138,27 +11978,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Train Station_577
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2560
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4659ca249b76b9f47bc86e42f6921fe4
-      internalID: 210263433
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Train Station_578
       rect:
         serializedVersion: 2
@@ -12259,48 +12078,6 @@ TextureImporter:
       bones: []
       spriteID: 84d74c159807cd94cbacae90d5f898c0
       internalID: 184358639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Train Station_437
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 2640
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67d5d8beec6221f40ad6bc5780ea28e8
-      internalID: -482421312
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Train Station_438
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 2640
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 72c0fb30c843a894da7fbe1c8d438710
-      internalID: 1079440781
       vertices: []
       indices: 
       edges: []
@@ -73567,14 +73344,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 176
-        y: 528
+        y: 448
         width: 16
-        height: 16
+        height: 112
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -8, y: 5}
+        - {x: -8, y: -49}
+        - {x: 2, y: -49}
+        - {x: 2, y: 5}
       tessellationDetail: 0
       bones: []
       spriteID: e15b51958ddb3b944bc2ff80a3fcf1a5
@@ -73672,14 +73453,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 272
-        y: 528
+        y: 448
         width: 16
-        height: 16
+        height: 112
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape: []
+      physicsShape:
+      - - {x: -2, y: 5}
+        - {x: -2, y: -49}
+        - {x: 8, y: -49}
+        - {x: 8, y: 5}
       tessellationDetail: 0
       bones: []
       spriteID: 46ee421161ab8ab4a8ec3d384ea60851
@@ -74088,27 +73873,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Train Station_3586
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 512
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c71e8895ce6081a47b88c37781aea11e
-      internalID: -669407437
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Train Station_3587
       rect:
         serializedVersion: 2
@@ -74188,27 +73952,6 @@ TextureImporter:
       bones: []
       spriteID: 84abdd19f7ee95b47969cc16823c087c
       internalID: -1110566940
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Train Station_3591
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 512
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da3f3698075d0a74b9db8752c2a63588
-      internalID: -1443507510
       vertices: []
       indices: 
       edges: []
@@ -74550,27 +74293,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Train Station_3608
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 496
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e949b002712c3e4c8c9ee7443f7ca45
-      internalID: 1464794955
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Train Station_3609
       rect:
         serializedVersion: 2
@@ -74650,27 +74372,6 @@ TextureImporter:
       bones: []
       spriteID: 20f954b725adbdb4d98fe09f840e5897
       internalID: -1255929479
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Train Station_3613
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 496
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d83128d81b8d74241b8169f2523d7aa9
-      internalID: -515850928
       vertices: []
       indices: 
       edges: []
@@ -75012,27 +74713,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Train Station_3630
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 480
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1c46db7c2e43736428bfe17dfc9def26
-      internalID: 932226082
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Train Station_3631
       rect:
         serializedVersion: 2
@@ -75112,27 +74792,6 @@ TextureImporter:
       bones: []
       spriteID: 18efeed6ae97efa499816ebf8aa677d6
       internalID: 183884434
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Train Station_3635
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 480
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4f191ce9daf7903489a6de882049cb2c
-      internalID: -1728544053
       vertices: []
       indices: 
       edges: []
@@ -75474,27 +75133,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Train Station_3652
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 464
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69825971d734b69409b20f801b789aad
-      internalID: 637637018
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Train Station_3653
       rect:
         serializedVersion: 2
@@ -75574,27 +75212,6 @@ TextureImporter:
       bones: []
       spriteID: 795607b4a7680f84e8b86d58037d090b
       internalID: -1944833721
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Train Station_3657
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 464
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e001f7e1980f6f6498a70570ef799127
-      internalID: 208786956
       vertices: []
       indices: 
       edges: []
@@ -75747,27 +75364,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Train Station_3665
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 448
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b0649fe3c93c434baf1febb2ad3275d
-      internalID: 1835634851
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Train Station_3666
       rect:
         serializedVersion: 2
@@ -75847,27 +75443,6 @@ TextureImporter:
       bones: []
       spriteID: cb48a53ded9d63e4cb947dc4182545f7
       internalID: 1201235487
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Train Station_3670
-      rect:
-        serializedVersion: 2
-        x: 272
-        y: 448
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe5dc085f559d064bb747e6e19fd14d6
-      internalID: -2055102438
       vertices: []
       indices: 
       edges: []

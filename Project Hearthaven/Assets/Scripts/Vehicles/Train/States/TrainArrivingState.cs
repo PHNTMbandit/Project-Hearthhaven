@@ -9,7 +9,7 @@ namespace ProjectHearthaven.Vehicles.Train.States
         {
             base.OnEnter();
 
-            stateController.ArriveAnimation.DOPlay();
+            stateController.DepartingAnimation.DOPlayById("0");
             stateController.ArriveAnimation.onComplete.AddListener(CompleteState);
         }
 
