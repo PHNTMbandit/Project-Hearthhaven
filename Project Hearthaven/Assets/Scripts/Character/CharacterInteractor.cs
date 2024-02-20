@@ -1,5 +1,6 @@
 using Micosmo.SensorToolkit;
 using ProjectHearthaven.Capabilities;
+using ProjectHearthaven.UI;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
@@ -10,51 +11,46 @@ namespace ProjectHearthaven.Character
     public class CharacterInteractor : MonoBehaviour
     {
         [BoxGroup("References"), SerializeField]
+        private InteractorUI _interactorUI;
+
+        [BoxGroup("References"), SerializeField]
         private InputReader _inputReader;
 
         [BoxGroup("References"), SerializeField]
         private RangeSensor2D _sensor;
 
-        public UnityEvent<Interactable> onInteractableDetected;
-        public UnityEvent onInteractableLost,
-            onInteract;
+        public UnityEvent onInteract;
 
-        private void Awake()
+        private void Update()
         {
-            _sensor.OnDetected.AddListener(OnInteractableDetected);
-            _sensor.OnLostDetection.AddListener(OnInteractableLost);
+            var interactable = _sensor.GetNearestComponent<Interactable>();
+
+            if (interactable != null)
+            {
+                if (interactable.IsInteractable)
+                {
+                    _interactorUI.ShowUI(interactable);
+                }
+                else
+                {
+                    _interactorUI.HideUI();
+                }
+            }
+            else
+            {
+                _interactorUI.HideUI();
+            }
         }
 
         public void OnInteract()
         {
-            if (_sensor.GetNearestComponent<Interactable>() != null)
-            {
-                _sensor.GetNearestComponent<Interactable>().Interact();
-            }
-        }
+            var interactable = _sensor.GetNearestComponent<Interactable>();
 
-        public void OnInteractableDetected(GameObject gameObject, Sensor sensor)
-        {
-            if (gameObject != null)
+            if (interactable != null)
             {
-                if (gameObject.TryGetComponent(out Interactable interactable))
+                if (interactable.IsInteractable)
                 {
-                    interactable.OnDetected();
-
-                    onInteractableDetected?.Invoke(interactable);
-                }
-            }
-        }
-
-        public void OnInteractableLost(GameObject gameObject, Sensor sensor)
-        {
-            if (gameObject != null)
-            {
-                if (gameObject.TryGetComponent(out Interactable interactable))
-                {
-                    interactable.OnLost();
-
-                    onInteractableLost?.Invoke();
+                    interactable.Interact(gameObject);
                 }
             }
         }
