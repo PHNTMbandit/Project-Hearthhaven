@@ -11,7 +11,7 @@ namespace ProjectHearthaven.Capabilities
 
         public void Trade(GameObject trader)
         {
-            if (trader.TryGetComponent(out CharacterWallet wallet))
+            if (trader.TryGetComponent(out CharacterBankAccount wallet))
             {
                 wallet.RemoveDollars(_dollars);
             }

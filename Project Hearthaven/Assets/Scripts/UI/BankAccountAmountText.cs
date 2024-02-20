@@ -4,17 +4,17 @@ using UnityEngine;
 
 namespace ProjectHearthaven.UI
 {
-    public class WalletAmountText : MonoBehaviour
+    public class BankAccountAmountText : MonoBehaviour
     {
         [SerializeField]
-        private TextMeshProUGUI _walletAmountText;
+        private TextMeshProUGUI _amountText;
 
         [SerializeField]
-        private CharacterWallet _wallet;
+        private CharacterBankAccount _bankAccount;
 
         private void Awake()
         {
-            _wallet.onWalletChanged += UpdateUI;
+            _bankAccount.onBankAccountChanged += UpdateUI;
         }
 
         private void Start()
@@ -24,7 +24,7 @@ namespace ProjectHearthaven.UI
 
         private void UpdateUI()
         {
-            _walletAmountText.SetText($"<sprite name=Small Coin> {_wallet.Dollars:C0}");
+            _amountText.SetText($"<sprite name=Small Coin> {_bankAccount.Dollars:C0}");
         }
     }
 }

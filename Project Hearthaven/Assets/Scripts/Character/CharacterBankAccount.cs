@@ -4,8 +4,8 @@ using UnityEngine.Events;
 
 namespace ProjectHearthaven.Character
 {
-    [AddComponentMenu("Character/Character Wallet")]
-    public class CharacterWallet : MonoBehaviour
+    [AddComponentMenu("Character/Character Bank Account")]
+    public class CharacterBankAccount : MonoBehaviour
     {
         [SerializeField, Range(0, 10000), SuffixLabel("dollars")]
         private int _dollars;
@@ -23,20 +23,24 @@ namespace ProjectHearthaven.Character
                 );
         }
 
-        public UnityAction onWalletChanged;
+        public UnityAction onBankAccountChanged;
+        public UnityAction<int> onDollarsRemoved,
+            onDollarsAdded;
 
         public void AddDollars(int amount)
         {
-            _dollars += amount;
+            Dollars += amount;
 
-            onWalletChanged?.Invoke();
+            onDollarsAdded?.Invoke(amount);
+            onBankAccountChanged?.Invoke();
         }
 
         public void RemoveDollars(int amount)
         {
-            _dollars -= amount;
+            Dollars -= amount;
 
-            onWalletChanged?.Invoke();
+            onDollarsRemoved?.Invoke(amount);
+            onBankAccountChanged?.Invoke();
         }
 
         public bool CanTransfer(int amount)

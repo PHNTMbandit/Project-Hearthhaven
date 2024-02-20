@@ -1,3 +1,4 @@
+using ProjectHearthaven.Controllers;
 using TMPro;
 using UnityEngine;
 
