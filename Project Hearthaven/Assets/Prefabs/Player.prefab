@@ -193,8 +193,8 @@ GameObject:
   - component: {fileID: 3268105199439077973}
   - component: {fileID: 8934911572418257980}
   - component: {fileID: 2126926755079170994}
-  - component: {fileID: 7047257899146403385}
   - component: {fileID: 1760941495653740402}
+  - component: {fileID: 7047257899146403385}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -519,18 +519,6 @@ MonoBehaviour:
     onDialogueSystemUnpause:
       m_PersistentCalls:
         m_Calls: []
---- !u!114 &7047257899146403385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3773726513736863238}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaf6a3843af869e46a0010cf44652f35, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1760941495653740402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,6 +538,18 @@ MonoBehaviour:
   m_target: {fileID: 0}
   m_usePlayerSpawnpoint: 1
   m_multiscene: 0
+--- !u!114 &7047257899146403385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3773726513736863238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaf6a3843af869e46a0010cf44652f35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4622315821664298689
 GameObject:
   m_ObjectHideFlags: 0
