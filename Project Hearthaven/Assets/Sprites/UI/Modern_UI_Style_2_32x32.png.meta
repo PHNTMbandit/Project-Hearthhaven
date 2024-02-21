@@ -7547,13 +7547,13 @@ TextureImporter:
       name: Modern_UI_Style_2_32x32_510
       rect:
         serializedVersion: 2
-        x: 800
+        x: 824
         y: 608
-        width: 96
+        width: 48
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 6, y: 6, z: 6, w: 8}
       outline: []
       physicsShape: []
       tessellationDetail: 0

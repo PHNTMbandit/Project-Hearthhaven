@@ -260,7 +260,6 @@ GameObject:
   - component: {fileID: 4671812458189842016}
   - component: {fileID: 7949292010146038120}
   - component: {fileID: 8766143590084051502}
-  - component: {fileID: 2664662781300813534}
   m_Layer: 0
   m_Name: Ticket Gate
   m_TagString: Untagged
@@ -439,46 +438,9 @@ MonoBehaviour:
   onInteracted:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7949292010146038120}
-        m_TargetAssemblyTypeName: ProjectHearthaven.Capabilities.Animateable, Assembly-CSharp
-        m_MethodName: SetState
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: open
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8766143590084051502}
-        m_TargetAssemblyTypeName: ProjectHearthaven.Capabilities.Interactable, Assembly-CSharp
-        m_MethodName: SetInteractable
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2664662781300813534}
-        m_TargetAssemblyTypeName: ProjectHearthaven.Capabilities.Tradeable, Assembly-CSharp
-        m_MethodName: Trade
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ProjectHearthaven.Vehicles.Train.TrainStateController,
-          Assembly-CSharp
-        m_MethodName: CallTrain
+        m_TargetAssemblyTypeName: ProjectHearthaven.UI.UIPanel, Assembly-CSharp
+        m_MethodName: Open
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -491,16 +453,3 @@ MonoBehaviour:
   onLost:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2664662781300813534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5588022486848088620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28d6276dd4291d247babb3ef7bd5630c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _dollars: 34

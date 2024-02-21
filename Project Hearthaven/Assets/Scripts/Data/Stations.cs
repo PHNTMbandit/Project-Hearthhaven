@@ -1,4 +1,5 @@
 using System;
+using Sirenix.OdinInspector;
 using UnityEditor;
 using UnityEngine;
 
@@ -9,17 +10,19 @@ namespace ProjectHearthaven.Data
     {
         public string stationName;
         public SceneAsset scene;
+
+        [Range(0, 100), SuffixLabel("dollars")]
+        public int cost;
     }
 
     [CreateAssetMenu(menuName = "Data/Stations", fileName = "Stations")]
     public class Stations : ScriptableObject
     {
-        [SerializeField]
-        private Station[] _stations;
+        public Station[] stations;
 
         public Station GetStation(string name)
         {
-            return Array.Find(_stations, i => i.stationName == name);
+            return Array.Find(stations, i => i.stationName == name);
         }
     }
 }

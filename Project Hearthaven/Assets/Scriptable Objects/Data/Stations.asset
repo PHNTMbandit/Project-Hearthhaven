@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da2102d39e1920242ab600d4dce5996b, type: 3}
   m_Name: Stations
   m_EditorClassIdentifier: 
-  _stations:
+  stations:
   - stationName: Train Station
     scene: {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
+    cost: 5
+  - stationName: Train Station 1
+    scene: {fileID: 102900000, guid: e14734e50125f4d4e942e7e40ada9ec0, type: 3}
+    cost: 11
