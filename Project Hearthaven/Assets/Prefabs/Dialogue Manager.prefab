@@ -116,9 +116,12 @@ GameObject:
   - component: {fileID: 2386854172531553514}
   - component: {fileID: 3717115826850340300}
   - component: {fileID: 6907656504756044363}
+  - component: {fileID: 6677816458960890041}
+  - component: {fileID: 1341228589270370351}
+  - component: {fileID: 5397684427923628246}
+  - component: {fileID: 3342696914029722188}
   - component: {fileID: 4118316496206184989}
   - component: {fileID: 6248119788414627040}
-  - component: {fileID: 6677816458960890041}
   m_Layer: 0
   m_Name: Dialogue Manager
   m_TagString: Untagged
@@ -371,12 +374,85 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 689b4b1238e337d4590a91183947bcd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_key: 
+  m_key: DialogueManager_38344
   m_appendSaverTypeToKey: 0
   m_saveAcrossSceneChanges: 1
   m_restoreStateOnStart: 0
   skipApplyDataAfterFramesIfApplyImmediate: 1
   saveRawData: 0
+--- !u!114 &6677816458960890041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fbafe64f40b0694b8d4ec9c082f8bf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_prettyPrint: 0
+--- !u!114 &1341228589270370351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce15367ff646a9f448ec0e0bce64c2c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  storeSaveFilesIn: 0
+  customPath: 
+  encrypt: 1
+  encryptionPassword: My Password
+  m_debug: 0
+--- !u!114 &5397684427923628246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f019b7247c137954f95c3a9dd029c562, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onSaveStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onSaveEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoadStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onLoadEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  onSaveDataApplied:
+    m_PersistentCalls:
+      m_Calls: []
+  onSceneLoad:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &3342696914029722188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28d3329b6cd68ab4a99cdab5d7d333c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultStartingSceneName: 
 --- !u!114 &4118316496206184989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,19 +501,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8582b8f53f48f3488e5b52ecbf515df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6677816458960890041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 125852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fbafe64f40b0694b8d4ec9c082f8bf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_prettyPrint: 0
 --- !u!1001 &5205816048977961206
 PrefabInstance:
   m_ObjectHideFlags: 0

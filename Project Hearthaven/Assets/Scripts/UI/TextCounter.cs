@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using ProjectHearthaven.Character;
 using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
@@ -26,9 +25,6 @@ namespace ProjectHearthaven.UI
         [BoxGroup("Settings"), SerializeField, Range(0, 10)]
         private float _countDuration = 1;
 
-        [BoxGroup("References"), SerializeField]
-        private CharacterBankAccount _bankAccount;
-
         private Coroutine _C2T;
         private TextMeshProUGUI _text;
         private float _currentValue,
@@ -39,9 +35,9 @@ namespace ProjectHearthaven.UI
             _text = GetComponent<TextMeshProUGUI>();
         }
 
-        void Start()
+        public void Initialise(float value)
         {
-            _currentValue = _bankAccount.Dollars;
+            _currentValue = value;
             targetValue = _currentValue;
 
             SetText();

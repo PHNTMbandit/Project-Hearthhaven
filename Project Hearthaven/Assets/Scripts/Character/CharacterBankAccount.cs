@@ -8,13 +8,13 @@ namespace ProjectHearthaven.Character
     public class CharacterBankAccount : MonoBehaviour
     {
         [SerializeField, Range(0, 10000), SuffixLabel("dollars")]
-        private int _dollars;
+        private int _currentBalance;
 
-        public int Dollars
+        public int CurrentBalance
         {
-            get => _dollars;
+            get => _currentBalance;
             set =>
-                _dollars = (int)(
+                _currentBalance = (int)(
                     value <= 0
                         ? 0
                         : value >= Mathf.Infinity
@@ -23,29 +23,29 @@ namespace ProjectHearthaven.Character
                 );
         }
 
-        public UnityAction onBankAccountChanged;
+        public UnityAction onBalanceChanged;
         public UnityAction<int> onDollarsRemoved,
             onDollarsAdded;
 
         public void AddDollars(int amount)
         {
-            Dollars += amount;
+            CurrentBalance += amount;
 
             onDollarsAdded?.Invoke(amount);
-            onBankAccountChanged?.Invoke();
+            onBalanceChanged?.Invoke();
         }
 
         public void RemoveDollars(int amount)
         {
-            Dollars -= amount;
+            CurrentBalance -= amount;
 
             onDollarsRemoved?.Invoke(amount);
-            onBankAccountChanged?.Invoke();
+            onBalanceChanged?.Invoke();
         }
 
         public bool CanTransfer(int amount)
         {
-            return Dollars >= amount;
+            return CurrentBalance >= amount;
         }
     }
 }
