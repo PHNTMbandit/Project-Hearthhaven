@@ -1,4 +1,3 @@
-using DG.Tweening;
 using ProjectHearthaven.Player.States.SuperStates;
 
 namespace ProjectHearthaven.Player.States.SubStates
@@ -7,5 +6,15 @@ namespace ProjectHearthaven.Player.States.SubStates
     {
         public PlayerOnTrainState(PlayerStateController stateController, string stateAnimationName)
             : base(stateController, stateAnimationName) { }
+
+        public override void OnEnter()
+        {
+            base.OnEnter();
+
+            for (int i = 0; i < stateController.Sprites.Length; i++)
+            {
+                stateController.Sprites[i].color = new UnityEngine.Color(0, 0, 0, 0);
+            }
+        }
     }
 }

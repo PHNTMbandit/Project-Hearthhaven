@@ -158,7 +158,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -894336373, guid: c0206b6bd230c4342862967f4464086d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -227,6 +227,7 @@ MonoBehaviour:
   - {fileID: 833018248347126701}
   <ArriveAnimation>k__BackingField: {fileID: 2534696466639428529}
   <DepartingAnimation>k__BackingField: {fileID: 196090763142227744}
+  <Player>k__BackingField: {fileID: 0}
   onTrainArriving:
     m_PersistentCalls:
       m_Calls: []
@@ -549,7 +550,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -894336373, guid: c0206b6bd230c4342862967f4464086d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

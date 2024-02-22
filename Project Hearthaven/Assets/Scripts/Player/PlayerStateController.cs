@@ -1,6 +1,6 @@
+using System;
 using ProjectHearthaven.Character;
 using ProjectHearthaven.Player.States.SubStates;
-using ProjectHearthaven.Player.States.SuperStates;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -28,6 +28,8 @@ namespace ProjectHearthaven.Player
         public PlayerWalkState WalkState { get; private set; }
         public CharacterMove CharacterMove { get; private set; }
 
+        private readonly PlayerState[] _playerStates = new PlayerState[10];
+
         private void Awake()
         {
             StateMachine = new();
@@ -36,15 +38,12 @@ namespace ProjectHearthaven.Player
             Collider = GetComponent<Collider2D>();
             Sprites = GetComponentsInChildren<SpriteRenderer>();
 
-            EnterTrainState = new(this, "moving");
-            ExitTrainState = new(this, "moving");
-            IdleState = new(this, "idle");
-            OnTrainState = new(this, "idle");
-            WalkState = new(this, "moving");
-        }
+            _playerStates[0] = EnterTrainState = new(this, "moving");
+            _playerStates[1] = ExitTrainState = new(this, "moving");
+            _playerStates[2] = IdleState = new(this, "idle");
+            _playerStates[3] = OnTrainState = new(this, "idle");
+            _playerStates[4] = WalkState = new(this, "moving");
 
-        private void Start()
-        {
             StateMachine.Initialise(IdleState);
         }
 
@@ -66,6 +65,11 @@ namespace ProjectHearthaven.Player
         public void ExitTrain()
         {
             StateMachine.ChangeState(ExitTrainState);
+        }
+
+        public PlayerState GetPlayerState(string stateName)
+        {
+            return Array.Find(_playerStates, i => i.ToString() == stateName);
         }
     }
 }

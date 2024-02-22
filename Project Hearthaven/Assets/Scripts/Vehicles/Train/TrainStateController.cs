@@ -1,6 +1,7 @@
 using DG.Tweening;
 using PixelCrushers;
 using ProjectHearthaven.Data;
+using ProjectHearthaven.Player;
 using ProjectHearthaven.Vehicles.Train.States;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -21,6 +22,9 @@ namespace ProjectHearthaven.Vehicles.Train
         [field: BoxGroup("Animations"), SerializeField]
         public DOTweenAnimation DepartingAnimation { get; private set; }
 
+        [field: BoxGroup("References"), SerializeField]
+        public PlayerStateController Player { get; private set; }
+
         public TrainStateMachine StateMachine { get; private set; }
         public TrainArrivingState ArrivingState { get; private set; }
         public TrainArrivedState ArrivedState { get; private set; }
@@ -38,10 +42,7 @@ namespace ProjectHearthaven.Vehicles.Train
             ArrivedState = new(this);
             DepartingState = new(this);
             WaitingState = new(this);
-        }
 
-        private void Start()
-        {
             StateMachine.Initialise(WaitingState);
         }
 

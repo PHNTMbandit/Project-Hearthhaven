@@ -5540,18 +5540,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5756239342851766463, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6008553653279756264, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6008553653279756264, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 8192973520324537249, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
+      propertyPath: <Player>k__BackingField
+      value: 
+      objectReference: {fileID: 8793176220069491018}
     - target: {fileID: 8192973520324537249, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
       propertyPath: onTrainDeparting.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

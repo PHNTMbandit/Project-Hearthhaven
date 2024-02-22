@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace ProjectHearthaven.Player
 {
     public class PlayerStateMachine
