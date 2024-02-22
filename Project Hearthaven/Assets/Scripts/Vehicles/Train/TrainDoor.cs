@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace ProjectHearthaven.Vehicles.Train
@@ -6,6 +7,12 @@ namespace ProjectHearthaven.Vehicles.Train
     [RequireComponent(typeof(Collider2D))]
     public class TrainDoor : MonoBehaviour
     {
+        [ShowInInspector]
+        public bool HasPlayer { get; private set; }
+
+        [SerializeField]
+        private TrainStateController _trainController;
+
         private Animator _animator;
         private Collider2D _collider;
 
@@ -13,6 +20,15 @@ namespace ProjectHearthaven.Vehicles.Train
         {
             _animator = GetComponent<Animator>();
             _collider = GetComponent<Collider2D>();
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.CompareTag("Player"))
+            {
+                _trainController.DepartTrain();
+                HasPlayer = true;
+            }
         }
 
         private void Start()
@@ -30,6 +46,11 @@ namespace ProjectHearthaven.Vehicles.Train
         {
             _collider.enabled = false;
             _animator.SetTrigger("close");
+        }
+
+        public void SetHasPlayer(bool hasPlayer)
+        {
+            HasPlayer = hasPlayer;
         }
     }
 }

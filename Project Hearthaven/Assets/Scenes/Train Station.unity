@@ -5500,6 +5500,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3553594308044419245, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4217199545686783209, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.709999

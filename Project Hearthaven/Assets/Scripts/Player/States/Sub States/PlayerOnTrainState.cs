@@ -13,7 +13,17 @@ namespace ProjectHearthaven.Player.States.SubStates
 
             for (int i = 0; i < stateController.Sprites.Length; i++)
             {
-                stateController.Sprites[i].color = new UnityEngine.Color(0, 0, 0, 0);
+                stateController.Sprites[i].enabled = false;
+            }
+        }
+
+        public override void OnExit()
+        {
+            base.OnExit();
+
+            for (int i = 0; i < stateController.Sprites.Length; i++)
+            {
+                stateController.Sprites[i].enabled = true;
             }
         }
     }
