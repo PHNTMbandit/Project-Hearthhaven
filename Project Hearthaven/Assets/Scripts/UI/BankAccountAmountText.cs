@@ -15,12 +15,22 @@ namespace ProjectHearthaven.UI
         {
             _textCounter = GetComponent<TextCounter>();
 
-            _bankAccount.onBankAccountChanged += UpdateUI;
+            _bankAccount.onBalanceChanged += UpdateUI;
+        }
+
+        private void Start()
+        {
+            Invoke(nameof(Initialise), 0.1f);
+        }
+
+        private void Initialise()
+        {
+            _textCounter.Initialise(_bankAccount.CurrentBalance);
         }
 
         private void UpdateUI()
         {
-            _textCounter.SetTarget(_bankAccount.Dollars);
+            _textCounter.SetTarget(_bankAccount.CurrentBalance);
         }
     }
 }

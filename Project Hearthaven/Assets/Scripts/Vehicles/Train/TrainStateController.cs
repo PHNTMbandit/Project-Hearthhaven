@@ -1,4 +1,6 @@
 using DG.Tweening;
+using PixelCrushers;
+using ProjectHearthaven.Data;
 using ProjectHearthaven.Vehicles.Train.States;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -8,6 +10,8 @@ namespace ProjectHearthaven.Vehicles.Train
 {
     public class TrainStateController : MonoBehaviour
     {
+        public Station Destination { get; private set; }
+
         [field: BoxGroup("Animations"), SerializeField]
         public TrainDoor[] Doors { get; private set; }
 
@@ -51,9 +55,11 @@ namespace ProjectHearthaven.Vehicles.Train
             StateMachine.CurrentState.OnFixedUpdate();
         }
 
-        public void CallTrain()
+        public void CallTrain(Station destination)
         {
             StateMachine.ChangeState(ArrivingState);
+
+            Destination = destination;
 
             onTrainArriving?.Invoke();
         }
@@ -63,6 +69,11 @@ namespace ProjectHearthaven.Vehicles.Train
             StateMachine.ChangeState(DepartingState);
 
             onTrainDeparting?.Invoke();
+        }
+
+        public void TravelToDestination()
+        {
+            SaveSystem.LoadScene(Destination.scene.name);
         }
     }
 }
