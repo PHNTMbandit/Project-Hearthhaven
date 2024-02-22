@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ProjectHearthaven.Player.States.SubStates
 {
-    public class PlayerWalkState : PlayerCanMoveState
+    public class PlayerWalkState : PlayerMoveState
     {
         public PlayerWalkState(PlayerStateController stateController, string stateAnimationName)
             : base(stateController, stateAnimationName) { }
@@ -22,7 +22,7 @@ namespace ProjectHearthaven.Player.States.SubStates
         {
             base.OnFixedUpdate();
 
-            stateController.CharacterMove.Move();
+            stateController.CharacterMove.Move(stateController.InputReader.MoveInput);
         }
     }
 }

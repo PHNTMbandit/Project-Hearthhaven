@@ -336,6 +336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <InputReader>k__BackingField: {fileID: 11400000, guid: dca32dc5366dd5842a68e4823dd59439, type: 2}
+  <EnterExitTrainSpeed>k__BackingField: 0.3
 --- !u!114 &3268105199439077973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,7 +409,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _walkSpeed: 3
-  _inputReader: {fileID: 11400000, guid: dca32dc5366dd5842a68e4823dd59439, type: 2}
 --- !u!114 &8934911572418257980
 MonoBehaviour:
   m_ObjectHideFlags: 0

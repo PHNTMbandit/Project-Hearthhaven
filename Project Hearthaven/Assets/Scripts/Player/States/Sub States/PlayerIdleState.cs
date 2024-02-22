@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ProjectHearthaven.Player.States.SubStates
 {
-    public class PlayerIdleState : PlayerCanMoveState
+    public class PlayerIdleState : PlayerMoveState
     {
         public PlayerIdleState(PlayerStateController stateController, string stateAnimationName)
             : base(stateController, stateAnimationName) { }
