@@ -14,7 +14,7 @@ namespace ProjectHearthaven.Vehicles.Train.States
                 stateController.Doors[i].Close();
             }
 
-            stateController.DepartingAnimation.DOPlayById("1");
+            stateController.MoveToDepartingTarget();
         }
     }
 }

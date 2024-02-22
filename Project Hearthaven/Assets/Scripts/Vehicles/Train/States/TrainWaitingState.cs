@@ -5,6 +5,13 @@ namespace ProjectHearthaven.Vehicles.Train.States
         public TrainWaitingState(TrainStateController stateController)
             : base(stateController) { }
 
+        public override void OnEnter()
+        {
+            base.OnEnter();
+
+            stateController.ResetTrain();
+        }
+
         public override void OnUpdate()
         {
             base.OnUpdate();
@@ -14,7 +21,7 @@ namespace ProjectHearthaven.Vehicles.Train.States
                 == stateController.Player.OnTrainState
             )
             {
-                stateController.StateMachine.Initialise(stateController.ArrivingState);
+                stateController.CallTrain(null);
             }
         }
     }

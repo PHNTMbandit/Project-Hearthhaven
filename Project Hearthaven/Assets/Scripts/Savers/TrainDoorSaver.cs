@@ -28,7 +28,6 @@ namespace ProjectHearthaven.Savers
         public override string RecordData()
         {
             _data.hasPlayer = _trainDoor.HasPlayer;
-            print(_data.hasPlayer);
 
             return SaveSystem.Serialize(_data);
         }

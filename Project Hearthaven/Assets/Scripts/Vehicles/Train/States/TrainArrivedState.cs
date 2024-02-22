@@ -28,8 +28,14 @@ namespace ProjectHearthaven.Vehicles.Train.States
                 stateController.Player.StateMachine.ChangeState(
                     stateController.Player.ExitTrainState
                 );
-                stateController.StateMachine.ChangeState(stateController.DepartingState);
+
+                stateController.Invoke(nameof(DepartTrain), 2);
             }
+        }
+
+        private void DepartTrain()
+        {
+            stateController.StateMachine.ChangeState(stateController.DepartingState);
         }
     }
 }

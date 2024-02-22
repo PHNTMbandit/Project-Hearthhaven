@@ -13,17 +13,35 @@ namespace ProjectHearthaven.Vehicles.Train
     {
         public Station Destination { get; private set; }
 
-        [field: BoxGroup("Animations"), SerializeField]
-        public TrainDoor[] Doors { get; private set; }
+        [BoxGroup("Tweens")]
+        [BoxGroup("Tweens/Arriving"), SerializeField]
+        private Transform _arrivalTarget;
 
-        [field: BoxGroup("Animations"), SerializeField]
-        public DOTweenAnimation ArriveAnimation { get; private set; }
+        [BoxGroup("Tweens/Arriving"), Range(0, 10), SerializeField]
+        private float _arrivingDuration,
+            _arrivingDelay;
 
-        [field: BoxGroup("Animations"), SerializeField]
-        public DOTweenAnimation DepartingAnimation { get; private set; }
+        [BoxGroup("Tweens/Arriving"), EnumPaging, SerializeField]
+        private Ease _arrivingEaseType;
+
+        [BoxGroup("Tweens/Departing"), SerializeField]
+        private Transform _departingTarget;
+
+        [BoxGroup("Tweens/Departing"), Range(0, 10), SerializeField]
+        private float _departingDuration,
+            _departingDelay;
+
+        [BoxGroup("Tweens/Departing"), EnumPaging, SerializeField]
+        private Ease _departingEaseType;
+
+        [BoxGroup("References"), SerializeField]
+        private Transform _resetPoint;
 
         [field: BoxGroup("References"), SerializeField]
         public PlayerStateController Player { get; private set; }
+
+        [field: BoxGroup("References"), SerializeField]
+        public TrainDoor[] Doors { get; private set; }
 
         public TrainStateMachine StateMachine { get; private set; }
         public TrainArrivingState ArrivingState { get; private set; }
@@ -31,8 +49,7 @@ namespace ProjectHearthaven.Vehicles.Train
         public TrainDepartingState DepartingState { get; private set; }
         public TrainWaitingState WaitingState { get; private set; }
 
-        public UnityEvent onTrainArriving,
-            onTrainDeparting;
+        public UnityEvent onTrainDeparting;
 
         private void Awake()
         {
@@ -59,10 +76,7 @@ namespace ProjectHearthaven.Vehicles.Train
         public void CallTrain(Station destination)
         {
             StateMachine.ChangeState(ArrivingState);
-
             Destination = destination;
-
-            onTrainArriving?.Invoke();
         }
 
         public void DepartTrain()
@@ -72,9 +86,50 @@ namespace ProjectHearthaven.Vehicles.Train
             onTrainDeparting?.Invoke();
         }
 
+        public void ResetTrain()
+        {
+            transform.DORewind();
+            transform.position = _resetPoint.position;
+        }
+
+        public void MoveToArrivalTarget()
+        {
+            transform
+                .DOMoveX(_arrivalTarget.position.x, _arrivingDuration)
+                .SetDelay(_arrivingDelay)
+                .SetEase(_arrivingEaseType)
+                .OnComplete(
+                    delegate
+                    {
+                        StateMachine.ChangeState(ArrivedState);
+                    }
+                );
+        }
+
+        public void MoveToDepartingTarget()
+        {
+            transform
+                .DOMoveX(_departingTarget.position.x, _departingDuration)
+                .SetDelay(_departingDelay)
+                .SetEase(_departingEaseType)
+                .OnComplete(
+                    delegate
+                    {
+                        TravelToDestination();
+                    }
+                );
+        }
+
         public void TravelToDestination()
         {
-            SaveSystem.LoadScene(Destination.scene.name);
+            if (Destination != null)
+            {
+                SaveSystem.LoadScene(Destination.scene.name);
+            }
+            else
+            {
+                StateMachine.ChangeState(WaitingState);
+            }
         }
     }
 }

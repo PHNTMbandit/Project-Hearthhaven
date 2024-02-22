@@ -939,6 +939,30 @@ MonoBehaviour:
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 0
     IsHidden: 0
+  - Type: 0
+    Name: 
+    GameObject: {fileID: 0}
+    Ordinal: 59
+    Priority: 0
+    IconType: 114000
+    IconTexture: {fileID: 0}
+    IsIconRecursive: 0
+    BackgroundType: 0
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsHidden: 0
+  - Type: 0
+    Name: 
+    GameObject: {fileID: 1087393317}
+    Ordinal: 60
+    Priority: 0
+    IconType: 114000
+    IconTexture: {fileID: 0}
+    IsIconRecursive: 1
+    BackgroundType: 0
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
+    IsHidden: 0
 --- !u!4 &215111819
 Transform:
   m_ObjectHideFlags: 0
@@ -5478,6 +5502,37 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2710501440924003647, guid: aff497d144d05144a81a26da2f8139bb, type: 3}
   m_PrefabInstance: {fileID: 4071748523376404618}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &757365164
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 757365165}
+  m_Layer: 0
+  m_Name: Train Reset Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &757365165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757365164}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -30, y: -3.0001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1087393318}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &803037754 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2480923513692231845, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
@@ -5496,6 +5551,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 560884269876549099, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2480923513692231845, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
       propertyPath: m_Name
       value: Train 4
@@ -5544,6 +5603,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8192973520324537249, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
+      propertyPath: _resetPoint
+      value: 
+      objectReference: {fileID: 757365165}
+    - target: {fileID: 8192973520324537249, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
+      propertyPath: _arrivalTarget
+      value: 
+      objectReference: {fileID: 1201365832}
+    - target: {fileID: 8192973520324537249, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
+      propertyPath: _departingTarget
+      value: 
+      objectReference: {fileID: 2034894797}
     - target: {fileID: 8192973520324537249, guid: a94b4eb225a778b40b5e6781d5ba75a6, type: 3}
       propertyPath: <Player>k__BackingField
       value: 
@@ -10335,6 +10406,40 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
+--- !u!1 &1087393317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1087393318}
+  m_Layer: 0
+  m_Name: Train Points
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1087393318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087393317}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 757365165}
+  - {fileID: 1201365832}
+  - {fileID: 2034894797}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1091500214 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8205343919787739347, guid: 7659d061bae424940946334d35ab23a7, type: 3}
@@ -86650,6 +86755,37 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2723408437515746183, guid: 66e5210e845540d47ad4053fcf776fd7, type: 3}
   m_PrefabInstance: {fileID: 431215694}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1201365831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1201365832}
+  m_Layer: 0
+  m_Name: Train Arrival Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1201365832
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201365831}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.709999, y: -3.0001001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1087393318}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1230977049 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8766143590084051502, guid: 66e5210e845540d47ad4053fcf776fd7, type: 3}
@@ -88184,6 +88320,37 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7359688903601855402, guid: bc05fdd3279530847abcdb606547a283, type: 3}
   m_PrefabInstance: {fileID: 8793176220069491017}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2034894796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2034894797}
+  m_Layer: 0
+  m_Name: Train Departing Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2034894797
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034894796}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 41, y: -3.0001001, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1087393318}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2089973722
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -88998,3 +89165,4 @@ SceneRoots:
   - {fileID: 189400877}
   - {fileID: 215111819}
   - {fileID: 1520770958}
+  - {fileID: 1087393318}
