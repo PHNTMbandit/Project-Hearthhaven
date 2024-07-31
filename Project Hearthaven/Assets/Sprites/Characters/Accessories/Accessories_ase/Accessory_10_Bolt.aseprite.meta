@@ -192,6 +192,7 @@ ScriptedImporter:
     cells:
     - name: Accessory_10_Bolt_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 31
@@ -200,6 +201,7 @@ ScriptedImporter:
       spriteId: e1d3486f77a12dc4684db5565278b1cc
     - name: Accessory_10_Bolt_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 31
@@ -208,6 +210,7 @@ ScriptedImporter:
       spriteId: 433b6f0f682b86c4f9485dbc64b860f7
     - name: Accessory_10_Bolt_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 5
         y: 31

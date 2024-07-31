@@ -212,6 +212,7 @@ ScriptedImporter:
     cells:
     - name: Accessory_19_Party_Cone_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 30
@@ -220,6 +221,7 @@ ScriptedImporter:
       spriteId: df20003762208384f9023e43e4af26bf
     - name: Accessory_19_Party_Cone_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 30
@@ -228,6 +230,7 @@ ScriptedImporter:
       spriteId: abb31b3cf681d72409b8148128debc7b
     - name: Accessory_19_Party_Cone_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 30
@@ -236,6 +239,7 @@ ScriptedImporter:
       spriteId: 10a093f504bc0f64bb8ba80c9916d3c3
     - name: Accessory_19_Party_Cone_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 2
         y: 30

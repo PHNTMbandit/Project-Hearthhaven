@@ -332,6 +332,7 @@ ScriptedImporter:
     cells:
     - name: Accessory_03_Backpacks_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 18
@@ -340,6 +341,7 @@ ScriptedImporter:
       spriteId: d1cfa7b53a791f84f87408687f10bb7a
     - name: Accessory_03_Backpacks_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 18
@@ -348,6 +350,7 @@ ScriptedImporter:
       spriteId: ddfd2faa97ee1c346b96419bc1458f42
     - name: Accessory_03_Backpacks_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 18
@@ -356,6 +359,7 @@ ScriptedImporter:
       spriteId: 6bcc92460e9661f4dac3dbd33c014ca3
     - name: Accessory_03_Backpacks_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 18
@@ -364,6 +368,7 @@ ScriptedImporter:
       spriteId: 134987e6025bfa441b2f27800f9c25a0
     - name: Accessory_03_Backpacks_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 18
@@ -372,6 +377,7 @@ ScriptedImporter:
       spriteId: 733a3135fb27cfc49bb5b87beaf27cf5
     - name: Accessory_03_Backpacks_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 18
@@ -380,6 +386,7 @@ ScriptedImporter:
       spriteId: e351183666147b6479468d02015c40d0
     - name: Accessory_03_Backpacks_Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 18
@@ -388,6 +395,7 @@ ScriptedImporter:
       spriteId: 4dd3aa382354ac34d9439676074ada31
     - name: Accessory_03_Backpacks_Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 18
@@ -396,6 +404,7 @@ ScriptedImporter:
       spriteId: fb04736488cc1044db29094894669b6e
     - name: Accessory_03_Backpacks_Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 18
@@ -404,6 +413,7 @@ ScriptedImporter:
       spriteId: 60eee481019e9e042a52a71193ec8c65
     - name: Accessory_03_Backpacks_Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 18

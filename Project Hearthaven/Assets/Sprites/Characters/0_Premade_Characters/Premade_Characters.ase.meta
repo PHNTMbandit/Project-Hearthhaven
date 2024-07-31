@@ -532,6 +532,7 @@ ScriptedImporter:
     cells:
     - name: Premade_Characters_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -540,6 +541,7 @@ ScriptedImporter:
       spriteId: 32077d6f8eb54d3409646576f26897ea
     - name: Premade_Characters_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -548,6 +550,7 @@ ScriptedImporter:
       spriteId: c134511056ebf2543bb1620cd039e2a4
     - name: Premade_Characters_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 16
@@ -556,6 +559,7 @@ ScriptedImporter:
       spriteId: 3ed0824ca9e311d4cb6e0b46de5c1874
     - name: Premade_Characters_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 16
@@ -564,6 +568,7 @@ ScriptedImporter:
       spriteId: 212daa2b0ca04894c899cd0018cd68d7
     - name: Premade_Characters_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16
@@ -572,6 +577,7 @@ ScriptedImporter:
       spriteId: 885b3411a6bb4104084fea49f1b2b563
     - name: Premade_Characters_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -580,6 +586,7 @@ ScriptedImporter:
       spriteId: c609085e9392d4d49b48bcb7f84644a5
     - name: Premade_Characters_Frame_6
       frameIndex: 6
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -588,6 +595,7 @@ ScriptedImporter:
       spriteId: 6842d833ba29b5e48b3802f0879e2100
     - name: Premade_Characters_Frame_7
       frameIndex: 7
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 16
@@ -596,6 +604,7 @@ ScriptedImporter:
       spriteId: 0a0a0eb98350f9945881454c15c05c5f
     - name: Premade_Characters_Frame_8
       frameIndex: 8
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16
@@ -604,6 +613,7 @@ ScriptedImporter:
       spriteId: 14103849a7aff594d9ce4227c5fcf776
     - name: Premade_Characters_Frame_9
       frameIndex: 9
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -612,6 +622,7 @@ ScriptedImporter:
       spriteId: 699f1dcecf598a24bbfb8e2e21707d8d
     - name: Premade_Characters_Frame_10
       frameIndex: 10
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16
@@ -620,6 +631,7 @@ ScriptedImporter:
       spriteId: a863f8422193b6b46913a06c1bd244d5
     - name: Premade_Characters_Frame_11
       frameIndex: 11
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 16
@@ -628,6 +640,7 @@ ScriptedImporter:
       spriteId: f16a66760e687c742b381ff8df0bd47a
     - name: Premade_Characters_Frame_12
       frameIndex: 12
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 16
@@ -636,6 +649,7 @@ ScriptedImporter:
       spriteId: 85df6a14a93950c4c8a3a85b3c270cb6
     - name: Premade_Characters_Frame_13
       frameIndex: 13
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16
@@ -644,6 +658,7 @@ ScriptedImporter:
       spriteId: cb8146e61122e5c4a8f9642cd0080c13
     - name: Premade_Characters_Frame_14
       frameIndex: 14
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 0
@@ -652,6 +667,7 @@ ScriptedImporter:
       spriteId: 953c24190ed126e4185ab46601ff43c6
     - name: Premade_Characters_Frame_15
       frameIndex: 15
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16
@@ -660,6 +676,7 @@ ScriptedImporter:
       spriteId: 6913b765b609565438cbb2149f0f4872
     - name: Premade_Characters_Frame_16
       frameIndex: 16
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 16
@@ -668,6 +685,7 @@ ScriptedImporter:
       spriteId: 46fc65cdfb546ab4d8218976db346325
     - name: Premade_Characters_Frame_17
       frameIndex: 17
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 16
@@ -676,6 +694,7 @@ ScriptedImporter:
       spriteId: a376dc89242467442af1dd188a81c29c
     - name: Premade_Characters_Frame_18
       frameIndex: 18
+      additiveSortOrder: 0
       cellRect:
         x: 0
         y: 16
@@ -684,6 +703,7 @@ ScriptedImporter:
       spriteId: c9545fd64fddc474797604980f78abbd
     - name: Premade_Characters_Frame_19
       frameIndex: 19
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16

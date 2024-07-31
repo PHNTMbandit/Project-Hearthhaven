@@ -252,6 +252,7 @@ ScriptedImporter:
     cells:
     - name: Accessory_15_Glasses_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 24
@@ -260,6 +261,7 @@ ScriptedImporter:
       spriteId: c2f8f7218b1f71d4db136befbc99e8ca
     - name: Accessory_15_Glasses_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 24
@@ -268,6 +270,7 @@ ScriptedImporter:
       spriteId: ad7cac51ad19c4e42bfd7b51ff251cf7
     - name: Accessory_15_Glasses_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 24
@@ -276,6 +279,7 @@ ScriptedImporter:
       spriteId: d64372d91556ef247a04fe07122bd780
     - name: Accessory_15_Glasses_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 24
@@ -284,6 +288,7 @@ ScriptedImporter:
       spriteId: 614e97543314d264ebb85dbb318da9b0
     - name: Accessory_15_Glasses_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 24
@@ -292,6 +297,7 @@ ScriptedImporter:
       spriteId: 0ae7a3f6d4ecc594ebf6055f57011799
     - name: Accessory_15_Glasses_Frame_5
       frameIndex: 5
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 25

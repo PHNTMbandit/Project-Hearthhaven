@@ -212,6 +212,7 @@ ScriptedImporter:
     cells:
     - name: Outfit_07_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16
@@ -220,6 +221,7 @@ ScriptedImporter:
       spriteId: 9104dadb4bae35d4c9ed9cf4b1c2899d
     - name: Outfit_07_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16
@@ -228,6 +230,7 @@ ScriptedImporter:
       spriteId: f3d4a08f267dfdb4cba43f6e08ad47cc
     - name: Outfit_07_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16
@@ -236,6 +239,7 @@ ScriptedImporter:
       spriteId: 698d2d910b72b0342ae1e80536327794
     - name: Outfit_07_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 16

@@ -192,6 +192,7 @@ ScriptedImporter:
     cells:
     - name: Accessory_18_Chef_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 29
@@ -200,6 +201,7 @@ ScriptedImporter:
       spriteId: 02d160856d7ed0647a21c813d5ce3c27
     - name: Accessory_18_Chef_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 29
@@ -208,6 +210,7 @@ ScriptedImporter:
       spriteId: 69df38ff888fa97428332727d386608c
     - name: Accessory_18_Chef_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 1
         y: 29
