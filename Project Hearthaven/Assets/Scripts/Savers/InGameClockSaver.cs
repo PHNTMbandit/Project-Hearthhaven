@@ -6,7 +6,7 @@ using UnityEngine;
 namespace ProjectHearthaven.Savers
 {
     [AddComponentMenu("Savers/InGameClockSaver")]
-    [RequireComponent(typeof(DayNightCycleController))]
+    [RequireComponent(typeof(InGameClockCycleController))]
     public class InGameClockSaver : Saver
     {
         [Serializable]
@@ -20,22 +20,22 @@ namespace ProjectHearthaven.Savers
         }
 
         private Data _data = new();
-        private DayNightCycleController _dayNightCycle;
+        private InGameClockCycleController _dayNightCycle;
 
         public override void Awake()
         {
             base.Awake();
 
-            _dayNightCycle = GetComponent<DayNightCycleController>();
+            _dayNightCycle = GetComponent<InGameClockCycleController>();
         }
 
         public override string RecordData()
         {
-            _data.year = _dayNightCycle.InGameClock.Year;
-            _data.month = _dayNightCycle.InGameClock.Month;
-            _data.day = _dayNightCycle.InGameClock.Day;
-            _data.hour = _dayNightCycle.InGameClock.Hour;
-            _data.minute = _dayNightCycle.InGameClock.Minute;
+            _data.year = _dayNightCycle.Clock.Year;
+            _data.month = _dayNightCycle.Clock.Month;
+            _data.day = _dayNightCycle.Clock.Day;
+            _data.hour = _dayNightCycle.Clock.Hour;
+            _data.minute = _dayNightCycle.Clock.Minute;
 
             return SaveSystem.Serialize(_data);
         }

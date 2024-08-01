@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace ProjectHearthaven.Vehicles.Train.States
 {
     public class TrainWaitingState : TrainState

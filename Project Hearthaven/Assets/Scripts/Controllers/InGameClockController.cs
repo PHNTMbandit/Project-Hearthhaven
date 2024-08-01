@@ -7,9 +7,9 @@ using UnityEngine.Rendering.Universal;
 
 namespace ProjectHearthaven.Controllers
 {
-    public class DayNightCycleController : MonoBehaviour
+    public class InGameClockCycleController : MonoBehaviour
     {
-        public DateTime InGameClock { get; private set; }
+        public DateTime Clock { get; private set; }
 
         [TabGroup("Settings"), SerializeField, Range(1990, 2100)]
         private int _year;
@@ -56,12 +56,12 @@ namespace ProjectHearthaven.Controllers
         {
             while (true)
             {
-                InGameClock = InGameClock.AddMinutes(1);
+                Clock = Clock.AddMinutes(1);
 
                 if (!_isUnderground)
                 {
                     _globalLight.intensity = _cycleCurve.Evaluate(
-                        (float)InGameClock.TimeOfDay.TotalMinutes
+                        (float)Clock.TimeOfDay.TotalMinutes
                     );
                 }
 
@@ -73,7 +73,7 @@ namespace ProjectHearthaven.Controllers
 
         public void SetClock(DateTime clock)
         {
-            InGameClock = new DateTime(
+            Clock = new DateTime(
                 clock.Year,
                 clock.Month,
                 clock.Day,
@@ -81,6 +81,11 @@ namespace ProjectHearthaven.Controllers
                 clock.Minute,
                 clock.Second
             );
+        }
+
+        public void AddMinutesToClock(int minutes)
+        {
+            Clock = Clock.AddMinutes(minutes);
         }
 
         public TimeSpan CalculateTimeDifference(TimeSpan fromTime, TimeSpan toTime)

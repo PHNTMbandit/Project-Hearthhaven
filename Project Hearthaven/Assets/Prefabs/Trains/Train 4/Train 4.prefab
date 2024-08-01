@@ -227,31 +227,13 @@ MonoBehaviour:
   _departingDelay: 2
   _departingEaseType: 11
   _resetPoint: {fileID: 0}
+  <InGameClockController>k__BackingField: {fileID: 0}
+  <Player>k__BackingField: {fileID: 0}
   <Doors>k__BackingField:
   - {fileID: 3079148754657401978}
   - {fileID: 2027494003774994748}
   - {fileID: 2425236042220469632}
   - {fileID: 833018248347126701}
-  <Player>k__BackingField: {fileID: 0}
-  onTrainArriving:
-    m_PersistentCalls:
-      m_Calls: []
-  onTrainDeparting:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ProjectHearthaven.Player.PlayerStateController,
-          Assembly-CSharp
-        m_MethodName: BoardTrain
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &4822569116049455043
 GameObject:
   m_ObjectHideFlags: 0

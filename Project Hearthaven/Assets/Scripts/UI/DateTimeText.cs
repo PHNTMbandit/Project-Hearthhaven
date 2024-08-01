@@ -11,7 +11,7 @@ namespace ProjectHearthaven.UI
             _dateText;
 
         [SerializeField]
-        private DayNightCycleController _dayNightCycle;
+        private InGameClockCycleController _dayNightCycle;
 
         private void Awake()
         {
@@ -25,8 +25,8 @@ namespace ProjectHearthaven.UI
 
         private void UpdateUI()
         {
-            _timeText.SetText($"<sprite name=Clock> {_dayNightCycle.InGameClock:h:mm tt}");
-            _dateText.SetText(_dayNightCycle.InGameClock.ToString("ddd d MMM"));
+            _timeText.SetText($"<sprite name=Clock> {_dayNightCycle.Clock:h:mm tt}");
+            _dateText.SetText(_dayNightCycle.Clock.ToString("ddd d MMM"));
         }
     }
 }

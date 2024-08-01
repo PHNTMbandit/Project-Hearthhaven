@@ -13,7 +13,7 @@ namespace ProjectHearthaven.Player.States.SubStates
 
             for (int i = 0; i < stateController.Sprites.Length; i++)
             {
-                stateController.Sprites[i].enabled = false;
+                stateController.Sprites[i].color = new(1, 1, 1, 0);
             }
         }
 
@@ -23,7 +23,7 @@ namespace ProjectHearthaven.Player.States.SubStates
 
             for (int i = 0; i < stateController.Sprites.Length; i++)
             {
-                stateController.Sprites[i].enabled = true;
+                stateController.Sprites[i].color = new(1, 1, 1, 1);
             }
         }
     }

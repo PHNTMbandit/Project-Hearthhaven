@@ -22,7 +22,7 @@ namespace ProjectHearthaven.Player.States.SubStates
             {
                 stateController
                     .Sprites[i]
-                    .DOFade(0, 1)
+                    .DOFade(0, 0.5f)
                     .OnComplete(
                         delegate
                         {

@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82893d6fd1413ea47a7efca289afc218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentBalance: 500
+  _currentBalance: 9
 --- !u!114 &550624149281699869
 MonoBehaviour:
   m_ObjectHideFlags: 0

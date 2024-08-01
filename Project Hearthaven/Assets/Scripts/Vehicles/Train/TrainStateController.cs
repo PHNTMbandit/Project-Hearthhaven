@@ -1,11 +1,11 @@
 using DG.Tweening;
 using PixelCrushers;
+using ProjectHearthaven.Controllers;
 using ProjectHearthaven.Data;
 using ProjectHearthaven.Player;
 using ProjectHearthaven.Vehicles.Train.States;
 using Sirenix.OdinInspector;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace ProjectHearthaven.Vehicles.Train
 {
@@ -36,6 +36,9 @@ namespace ProjectHearthaven.Vehicles.Train
 
         [BoxGroup("References"), SerializeField]
         private Transform _resetPoint;
+
+        [field: BoxGroup("References"), SerializeField]
+        public InGameClockCycleController InGameClockController { get; private set; }
 
         [field: BoxGroup("References"), SerializeField]
         public PlayerStateController Player { get; private set; }
@@ -120,6 +123,7 @@ namespace ProjectHearthaven.Vehicles.Train
         {
             if (Destination != null)
             {
+                InGameClockController.AddMinutesToClock(Destination.travelTime);
                 SaveSystem.LoadScene(Destination.scene.name);
             }
             else
