@@ -5280,7 +5280,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.0697, y: -11.796909, z: -10}
+  m_LocalPosition: {x: 13, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -87382,7 +87382,7 @@ Transform:
   m_GameObject: {fileID: 1323478425}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.2495985, y: -9.165266, z: -9.916991}
+  m_LocalPosition: {x: -0.2495985, y: 3.8347344, z: -9.916991}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -89283,6 +89283,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2056183251259757797}
   - component: {fileID: 3222656826985208850}
+  - component: {fileID: 4364332363651418013}
   m_Layer: 0
   m_Name: Game Controllers
   m_TagString: GameController
@@ -89290,6 +89291,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4364332363651418013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4364332363651418012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7758097284484ca44ae0e47fee008a20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_key: GameControllers_16118
+  m_appendSaverTypeToKey: 0
+  m_saveAcrossSceneChanges: 1
+  m_restoreStateOnStart: 0
 --- !u!1001 &4397005071824033151
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89573,11 +89590,11 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 7862034438557370233, guid: bc05fdd3279530847abcdb606547a283, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7862034438557370233, guid: bc05fdd3279530847abcdb606547a283, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7862034438557370233, guid: bc05fdd3279530847abcdb606547a283, type: 3}
       propertyPath: m_LocalPosition.z

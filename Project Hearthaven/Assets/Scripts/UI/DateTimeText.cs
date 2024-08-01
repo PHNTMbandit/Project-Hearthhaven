@@ -25,8 +25,8 @@ namespace ProjectHearthaven.UI
 
         private void UpdateUI()
         {
-            _timeText.SetText($"<sprite name=Clock> {_dayNightCycle.CurrentTime:h:mm tt}");
-            _dateText.SetText(_dayNightCycle.CurrentTime.ToString("ddd d MMM"));
+            _timeText.SetText($"<sprite name=Clock> {_dayNightCycle.InGameClock:h:mm tt}");
+            _dateText.SetText(_dayNightCycle.InGameClock.ToString("ddd d MMM"));
         }
     }
 }

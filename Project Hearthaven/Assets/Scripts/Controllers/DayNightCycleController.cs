@@ -9,7 +9,7 @@ namespace ProjectHearthaven.Controllers
 {
     public class DayNightCycleController : MonoBehaviour
     {
-        public DateTime CurrentTime { get; private set; }
+        public DateTime InGameClock { get; private set; }
 
         [TabGroup("Settings"), SerializeField, Range(1990, 2100)]
         private int _year;
@@ -18,7 +18,7 @@ namespace ProjectHearthaven.Controllers
         private int _month;
 
         [TabGroup("Settings"), SerializeField, Range(1, 31)]
-        private int _date;
+        private int _day;
 
         [TabGroup("Settings"), SerializeField, Range(0, 23)]
         private int _hour;
@@ -40,28 +40,28 @@ namespace ProjectHearthaven.Controllers
 
         public UnityAction onTimeUpdate;
 
-        private void Start()
+        private void Awake()
         {
-            CurrentTime = new DateTime(_year, _month, _date, _hour, _minute, 0);
+            SetClock(new(_year, _month, _day, _hour, _minute, 0));
 
             if (_isUnderground)
             {
                 _globalLight.intensity = 1;
             }
 
-            StartCoroutine(UpdateTime());
+            StartCoroutine(UpdateClock());
         }
 
-        private IEnumerator UpdateTime()
+        private IEnumerator UpdateClock()
         {
             while (true)
             {
-                CurrentTime = CurrentTime.AddMinutes(1);
+                InGameClock = InGameClock.AddMinutes(1);
 
                 if (!_isUnderground)
                 {
                     _globalLight.intensity = _cycleCurve.Evaluate(
-                        (float)CurrentTime.TimeOfDay.TotalMinutes
+                        (float)InGameClock.TimeOfDay.TotalMinutes
                     );
                 }
 
@@ -69,6 +69,18 @@ namespace ProjectHearthaven.Controllers
 
                 yield return new WaitForSeconds(_minutePerSeconds);
             }
+        }
+
+        public void SetClock(DateTime clock)
+        {
+            InGameClock = new DateTime(
+                clock.Year,
+                clock.Month,
+                clock.Day,
+                clock.Hour,
+                clock.Minute,
+                clock.Second
+            );
         }
 
         public TimeSpan CalculateTimeDifference(TimeSpan fromTime, TimeSpan toTime)

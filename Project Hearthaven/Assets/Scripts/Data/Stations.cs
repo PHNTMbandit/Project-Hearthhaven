@@ -13,6 +13,9 @@ namespace ProjectHearthaven.Data
 
         [Range(0, 100), SuffixLabel("dollars")]
         public int cost;
+
+        [Range(0, 1000), SuffixLabel("minutes")]
+        public int travelTime;
     }
 
     [CreateAssetMenu(menuName = "Data/Stations", fileName = "Stations")]
