@@ -445,18 +445,20 @@ namespace PixelCrushers.QuestMachine
                 // Restore dynamic quests:
                 for (int i = 0; i < saveData.proceduralQuests.Count; i++)
                 {
-                    try
+                    if (QuestMachine.allowExceptions)
                     {
-                        var questProxy = JsonUtility.FromJson<QuestProxy>(saveData.proceduralQuests[i]);
-                        if (questProxy == null) continue;
-                        var quest = ScriptableObject.CreateInstance<Quest>();
-                        quest.name = questProxy.displayName;
-                        questProxy.CopyTo(quest);
-                        AddQuest(quest, true);
+                        AddQuestProxy(saveData.proceduralQuests[i]);
                     }
-                    catch (Exception e)
+                    else
                     {
-                        if (Debug.isDebugBuild) Debug.LogWarning("Quest Machine: Unable to restore quest from serialized quest proxy. Message: " + e.Message + "\nData: " + saveData.proceduralQuests[i], this);
+                        try
+                        {
+                            AddQuestProxy(saveData.proceduralQuests[i]);
+                        }
+                        catch (Exception e)
+                        {
+                            if (Debug.isDebugBuild) Debug.LogWarning("Quest Machine: Unable to restore quest from serialized quest proxy. Message: " + e.Message + "\nData: " + saveData.proceduralQuests[i], this);
+                        }
                     }
                 }
 
@@ -490,21 +492,28 @@ namespace PixelCrushers.QuestMachine
                     var quest = FindQuest(questID);
                     if (quest == null) quest = originalQuestList.Find(x => string.Equals(StringField.GetStringValue(x.id), questID));
                     if (quest == null) continue;
-                    try
+                    if (QuestMachine.allowExceptions)
                     {
                         QuestStateSerializer.DeserializeInto(quest, questData.bytes, true);
                     }
-                    catch (Exception e)
+                    else
                     {
                         try
                         {
-                            if (Debug.isDebugBuild) Debug.LogWarning("Quest Machine: Unable to restore quest: " + quest.name + ". Message: " + e.Message, this);
-                            Destroy(quest);
+                            QuestStateSerializer.DeserializeInto(quest, questData.bytes, true);
                         }
-                        catch (Exception) { }
-                        quest = quest.Clone(); // Add fresh copy if failed to deserialize.
-                        AddQuest(quest, true);
-                    }                    
+                        catch (Exception e)
+                        {
+                            try
+                            {
+                                if (Debug.isDebugBuild) Debug.LogWarning("Quest Machine: Unable to restore quest: " + quest.name + ". Message: " + e.Message, this);
+                                Destroy(quest);
+                            }
+                            catch (Exception) { }
+                            quest = quest.Clone(); // Add fresh copy if failed to deserialize.
+                            AddQuest(quest, true);
+                        }
+                    }
                 }
 
                 // Add any quests in original list that aren't in saved game:
@@ -529,8 +538,18 @@ namespace PixelCrushers.QuestMachine
             finally
             {
                 SaveSystem.framesToWaitBeforeSaveDataAppliedEvent = 1;
-                StartCoroutine(SetIsLoadingGameFalseAfter2Frames());
+                QuestMachineConfiguration.instance.StartCoroutine(SetIsLoadingGameFalseAfter2Frames());
             }
+        }
+
+        private void AddQuestProxy(string data)
+        {
+            var questProxy = JsonUtility.FromJson<QuestProxy>(data);
+            if (questProxy == null) return;
+            var quest = ScriptableObject.CreateInstance<Quest>();
+            quest.name = questProxy.displayName;
+            questProxy.CopyTo(quest);
+            AddQuest(quest, true);
         }
 
         protected IEnumerator SetIsLoadingGameFalseAfter2Frames()

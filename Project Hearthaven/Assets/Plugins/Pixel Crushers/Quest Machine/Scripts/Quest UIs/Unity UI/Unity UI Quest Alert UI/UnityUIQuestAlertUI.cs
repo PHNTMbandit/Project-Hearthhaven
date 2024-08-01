@@ -12,7 +12,7 @@ namespace PixelCrushers.QuestMachine
     /// Unity UI implementation of QuestAlertUI.
     /// </summary>
     [AddComponentMenu("")] // Use wrapper.
-    public class UnityUIQuestAlertUI : UnityUIBaseUI, IQuestAlertUI //[TODO] 1. Show UI Content list; 2. Scroll multiple alerts as they come.
+    public class UnityUIQuestAlertUI : UnityUIBaseUI, IQuestAlertUI 
     {
 
         #region Serialized Fields
@@ -38,6 +38,10 @@ namespace PixelCrushers.QuestMachine
         private bool m_alwaysUseContainerTemplate = false;
 
         [Header("Duration")]
+
+        [Tooltip("Queue new alerts if an alert is currently showing. If your alert UI scrolls alerts, you probably want this to be UNticked.")]
+        [SerializeField]
+        private bool m_queueAlerts = false;
 
         [Tooltip("Minimum duration in seconds to show alerts.")]
         [SerializeField]
@@ -101,6 +105,15 @@ namespace PixelCrushers.QuestMachine
         }
 
         /// <summary>
+        /// Queue new alerts if an alert is already showing.
+        /// </summary>
+        public bool queueAlerts
+        {
+            get { return m_queueAlerts; }
+            set { m_queueAlerts = value; }
+        }
+
+        /// <summary>
         /// Minimum duration in seconds to show alerts.
         /// </summary>
         public float minDisplayDuration
@@ -142,6 +155,22 @@ namespace PixelCrushers.QuestMachine
         protected override UnityUIIconListTemplate currentIconListTemplate { get { return iconListTemplate; } }
         protected override UnityUIButtonListTemplate currentButtonListTemplate { get { return buttonListTemplate; } }
 
+        protected Coroutine timedDespawnCoroutine = null;
+        protected Queue<QueuedContent> queuedAlerts = new Queue<QueuedContent>();
+
+        protected struct QueuedContent
+        {
+            public string questID;
+            public List<QuestContent> contents;
+            public string message;
+
+            public QueuedContent(string questID, List<QuestContent> contents)
+            { this.questID = questID; this.contents = contents; this.message = null; }
+
+            public QueuedContent(string message)
+            { this.message = message; this.questID = null; this.contents = null; }
+        }
+
         #endregion
 
         protected override void Awake()
@@ -168,6 +197,15 @@ namespace PixelCrushers.QuestMachine
         {
             if (contents == null || contents.Count == 0) return;
             if (!isVisible) Show();
+
+            // If an alert is already showing and queueAlerts is true, queue this one for later:
+            if (queueAlerts && timedDespawnCoroutine != null)
+            {
+                queuedAlerts.Enqueue(new QueuedContent(questID, contents));
+                return;
+            }
+
+            // Otherwise show it:
             UnityUIContentTemplate alertInstance;
             if (contents.Count == 1 && !alwaysUseContainerTemplate)
             {
@@ -189,7 +227,10 @@ namespace PixelCrushers.QuestMachine
                 }
                 contentManager = realContentManager;
             }
-            if (alertInstance != null) StartCoroutine(TimedDespawn(alertInstance, GetDisplayDuration(contents)));
+            if (alertInstance != null)
+            {
+                timedDespawnCoroutine = StartCoroutine(TimedDespawn(alertInstance, GetDisplayDuration(contents)));
+            }
             onShowAlert.Invoke();
         }
 
@@ -206,6 +247,15 @@ namespace PixelCrushers.QuestMachine
         {
             if (string.IsNullOrEmpty(message)) return;
             if (!isVisible) Show();
+
+            // If an alert is already showing and queueAlerts is true, queue this one for later:
+            if (queueAlerts && timedDespawnCoroutine != null)
+            {
+                Debug.Log("queue " + message);
+                queuedAlerts.Enqueue(new QueuedContent(message));
+                return;
+            }
+
             if (alwaysUseContainerTemplate)
             {
                 var container = Instantiate<UnityUIContainerTemplate>(alertContainerTemplate);
@@ -216,7 +266,10 @@ namespace PixelCrushers.QuestMachine
                 AddBodyContent(message);
                 container.AddInstanceToContainer(contentManager.GetLastAdded());
                 contentManager = realContentManager;
-                if (alertInstance != null) StartCoroutine(TimedDespawn(alertInstance, GetDisplayDuration(message)));
+                if (alertInstance != null)
+                {
+                    timedDespawnCoroutine = StartCoroutine(TimedDespawn(alertInstance, GetDisplayDuration(message)));
+                }
                 onShowAlert.Invoke();
             }
             else
@@ -226,7 +279,7 @@ namespace PixelCrushers.QuestMachine
                 var alertInstance = Instantiate<UnityUITextTemplate>(bodyTemplate);
                 currentContentManager.Add(alertInstance, currentContentContainer);
                 alertInstance.Assign(message);
-                StartCoroutine(TimedDespawn(alertInstance, GetDisplayDuration(message)));
+                timedDespawnCoroutine = StartCoroutine(TimedDespawn(alertInstance, GetDisplayDuration(message)));
                 onShowAlert.Invoke();
             }
         }
@@ -242,16 +295,38 @@ namespace PixelCrushers.QuestMachine
 
         protected virtual IEnumerator TimedDespawn(UnityUIContentTemplate instance, float duration)
         {
-            if (instance == null) yield break;
-            yield return new WaitForSeconds(duration);
-            if (leaveLastContentVisibleDuringHide && contentManager.instancedContent.Count <= 1)
+            if (instance != null)
             {
-                Hide();
+                yield return new WaitForSeconds(duration);
+                if (leaveLastContentVisibleDuringHide && 
+                    contentManager.instancedContent.Count <= 1 &&
+                    queuedAlerts.Count == 0)
+                {
+                    Hide();
+                }
+                else
+                {
+                    contentManager.Remove(instance);
+                    if (contentManager.instancedContent.Count == 0 && queuedAlerts.Count == 0)
+                    {
+                        Hide();
+                    }
+                }
             }
-            else
+            timedDespawnCoroutine = null;
+
+            // If there's a queued alert, show it:
+            if (queuedAlerts.Count > 0)
             {
-                contentManager.Remove(instance);
-                if (contentManager.instancedContent.Count == 0) Hide();
+                var nextContents = queuedAlerts.Dequeue();
+                if (string.IsNullOrEmpty(nextContents.message))
+                {
+                    ShowAlert(nextContents.questID, nextContents.contents);
+                }
+                else
+                {
+                    ShowAlert(nextContents.message);
+                }
             }
         }
 

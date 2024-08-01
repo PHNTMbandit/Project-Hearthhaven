@@ -4,6 +4,40 @@ Copyright © Pixel Crushers
 RELEASE NOTES
 -------------
 
+Version 1.10.47:
+[July 15, 2024]
+- Improved: Deed Reaction Events no longer requires an Animator component; exposed public properties for private variables.
+- Save System: Added Loading Screen Progress Bar component.
+
+
+Version 1.10.46:
+[May 27, 2024]
+- Updated for Unity 6.
+- Improved: Added InputDeviceManager.cursorLockMode if you want to change default cursor lock mode from Locked to Confined.
+- Fixed: SaveSystem.saveDataApplied is now still invoked even if scene has no savers.
+- Emerald AI 2024: Backported code for compatibility with Unity versions older than 2022.2.5.
+- Input System: Monitors InputSystem.onDeviceChange. No need to configure Joystick/Keyboard inputs To Watch.
+- RPG Builder: Fixed bug that caused the wrong RPG Builder faction to be updated.
+
+
+Version 1.10.45:
+[April 4, 2024]
+- Emerald AI 2024: Added support.
+
+
+Version 1.10.44:
+[March 12, 2024]
+- Dialogue System: Fixed Lua registration issue when domain reloading is disabled.
+- Save System: Spawned Object Manager can now restore saved data to respawned objects even when Frames To Wait is zero; restoring savers on respawned objects is now on by default.
+
+
+Version 1.10.43:
+[February 15, 2024]
+- Fixed: FactionManager serialization/deserialization now supports runtime-added factions.
+- Improved: Text Table Editor now has gear menu > Import > From Localize UI menu feature.
+- Fixed: SetLocalizedFonts now listens for UILocalizationManager.languageChanged events.
+
+
 Version 1.10.42:
 [December 21, 2023]
 - Added: FactionManager.ResetAll() and FactionMember.ResetAll().

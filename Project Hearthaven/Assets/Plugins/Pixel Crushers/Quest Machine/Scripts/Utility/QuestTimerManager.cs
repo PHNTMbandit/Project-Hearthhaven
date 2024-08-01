@@ -119,13 +119,20 @@ namespace PixelCrushers.QuestMachine
             {
                 if (m_timers[i] != null)
                 {
-                    try
+                    if (QuestMachine.allowExceptions)
                     {
                         m_timers[i].Tick();
                     }
-                    catch (System.Exception e) // Don't let exceptions stop the other timers.
+                    else
                     {
-                        if (Debug.isDebugBuild) Debug.LogError(e.Message);
+                        try
+                        {
+                            m_timers[i].Tick();
+                        }
+                        catch (System.Exception e) // Don't let exceptions stop the other timers.
+                        {
+                            if (Debug.isDebugBuild) Debug.LogError(e.Message);
+                        }
                     }
                 }
             }

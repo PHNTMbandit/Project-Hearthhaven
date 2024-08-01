@@ -233,7 +233,7 @@ namespace PixelCrushers.QuestMachine
                 else
                 {
                     // Otherwise use the tag's text:
-                    newDict.Add(tag, fieldName);
+                    newDict.Add(tag, kvp.Value);
                 }
             }
             tagDictionary.dict = newDict;

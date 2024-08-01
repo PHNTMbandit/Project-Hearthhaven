@@ -226,6 +226,12 @@ namespace PixelCrushers.QuestMachine
             if (textTableProperty != null) textTableProperty.objectReferenceValue = null;
         }
 
+        public static void ConsumeContextClickInRect(Rect rect)
+        {
+            var e = Event.current;
+            if (e.type == EventType.ContextClick && rect.Contains(e.mousePosition)) e.Use(); 
+        }
+
         #endregion
 
         #region Destroy Quest Immediate

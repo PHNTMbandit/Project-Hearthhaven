@@ -29,7 +29,7 @@ namespace ProjectHearthaven.UI
 
             foreach (Station station in _stationData.stations)
             {
-                if (SceneManager.GetActiveScene().name == station.scene.name)
+                if (SceneManager.GetActiveScene().name == station.stationName)
                 {
                     continue;
                 }

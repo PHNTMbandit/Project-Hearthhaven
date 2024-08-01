@@ -407,9 +407,14 @@ namespace PixelCrushers.QuestMachine
         {
             if (QuestMachine.debug) Debug.Log("Quest Machine: " + ((quest != null) ? quest.GetEditorName() : "Quest") + "." + GetEditorName() + ".SetState(" + newState + ")", quest);
 
-            m_state = newState;
+            if ((newState == QuestNodeState.Inactive) ||
+                (m_state == QuestNodeState.True && newState == QuestNodeState.Active))
+            {
+                // Reset conditions if node becomes inactive or if we're reverting from true to active:
+                ResetConditions();
+            }
 
-            if (newState == QuestNodeState.Inactive) ResetConditions();
+            m_state = newState;
 
             if (!informListeners)
             {
@@ -434,13 +439,20 @@ namespace PixelCrushers.QuestMachine
 
             // Notify that state changed:
             QuestMachineMessages.QuestNodeStateChanged(this, quest.id, id, m_state);
-            try
+            if (QuestMachine.allowExceptions)
             {
                 stateChanged(this);
             }
-            catch (Exception e) // Don't let exceptions in user-added events break our code.
+            else
             {
-                if (Debug.isDebugBuild) Debug.LogException(e);
+                try
+                {
+                    stateChanged(this);
+                }
+                catch (Exception e) // Don't let exceptions in user-added events break our code.
+                {
+                    if (Debug.isDebugBuild) Debug.LogException(e);
+                }
             }
 
             // Handle special node types:

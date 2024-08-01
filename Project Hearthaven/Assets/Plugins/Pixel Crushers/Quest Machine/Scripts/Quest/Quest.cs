@@ -88,6 +88,10 @@ namespace PixelCrushers.QuestMachine
         [SerializeField]
         private List<QuestContent> m_offerContentList;
 
+        [Tooltip("No limit to number of times quest can be accepted.")]
+        [SerializeField]
+        private bool m_infinitelyRepeatable;
+
         [Tooltip("Max number of times this quest can be accepted.")]
         [SerializeField]
         private int m_maxTimes;
@@ -390,11 +394,20 @@ namespace PixelCrushers.QuestMachine
         }
 
         /// <summary>
+        /// No limit to number of times quest can be accepted.
+        /// </summary>
+        public bool infinitelyRepeatable
+        {
+            get { return m_infinitelyRepeatable; }
+            set { m_infinitelyRepeatable = value; }
+        }
+
+        /// <summary>
         /// Max number of times this quest can be accepted.
         /// </summary>
         public int maxTimes
         {
-            get { return m_maxTimes; }
+            get { return m_infinitelyRepeatable ? int.MaxValue : m_maxTimes; }
             set { m_maxTimes = value; }
         }
 
@@ -631,6 +644,7 @@ namespace PixelCrushers.QuestMachine
             SetRuntimeReferences(); // Fix original's references since Instantiate calls OnEnable > SetRuntimeReferences while clone's fields still point to original.
             clone.isInstance = true;
             clone.originalAsset = originalAsset;
+            clone.isAsset = false;
             clone.cooldownSecondsRemaining = 0;
             autostartConditionSet.CloneSubassetsInto(clone.autostartConditionSet, this);
             offerConditionSet.CloneSubassetsInto(clone.offerConditionSet, this);
@@ -790,7 +804,7 @@ namespace PixelCrushers.QuestMachine
         /// </summary>
         public void SetStartChecking(bool enable)
         {
-            if (!Application.isPlaying) return;
+            if (!Application.isPlaying || isAsset) return;
             if (enable)
             {
                 SetRandomCounterValues();
@@ -828,28 +842,45 @@ namespace PixelCrushers.QuestMachine
 
         public void BecomeOfferable()
         {
-            try
+            if (QuestMachine.allowExceptions)
             {
                 if (GetState() != QuestState.WaitingToStart) SetState(QuestState.WaitingToStart);
                 questOfferable(this);
                 SetQuestIndicatorState(questGiverID, QuestIndicatorState.Offer);
             }
-            catch (Exception e) // Don't let exceptions in user-added events break our code.
+            else
             {
-                if (Debug.isDebugBuild) Debug.LogException(e);
+                try
+                {
+                    if (GetState() != QuestState.WaitingToStart) SetState(QuestState.WaitingToStart);
+                    questOfferable(this);
+                    SetQuestIndicatorState(questGiverID, QuestIndicatorState.Offer);
+                }
+                catch (Exception e) // Don't let exceptions in user-added events break our code.
+                {
+                    if (Debug.isDebugBuild) Debug.LogException(e);
+                }
             }
         }
 
         public void BecomeUnofferable()
         {
-            try
+            if (QuestMachine.allowExceptions)
             {
                 if (GetState() != QuestState.Disabled) SetState(QuestState.Disabled);
                 SetQuestIndicatorState(questGiverID, QuestIndicatorState.None);
             }
-            catch (Exception e) // Don't let exceptions in user-added events break our code.
+            else
             {
-                if (Debug.isDebugBuild) Debug.LogException(e);
+                try
+                {
+                    if (GetState() != QuestState.Disabled) SetState(QuestState.Disabled);
+                    SetQuestIndicatorState(questGiverID, QuestIndicatorState.None);
+                }
+                catch (Exception e) // Don't let exceptions in user-added events break our code.
+                {
+                    if (Debug.isDebugBuild) Debug.LogException(e);
+                }
             }
         }
 
@@ -910,13 +941,20 @@ namespace PixelCrushers.QuestMachine
 
             // Notify that state changed:
             QuestMachineMessages.QuestStateChanged(this, id, m_state);
-            try
+            if (QuestMachine.allowExceptions)
             {
                 stateChanged(this);
             }
-            catch (Exception e) // Don't let exceptions in user-added events break our code.
+            else
             {
-                if (Debug.isDebugBuild) Debug.LogException(e);
+                try
+                {
+                    stateChanged(this);
+                }
+                catch (Exception e) // Don't let exceptions in user-added events break our code.
+                {
+                    if (Debug.isDebugBuild) Debug.LogException(e);
+                }
             }
 
             // If going active, activate the start node:

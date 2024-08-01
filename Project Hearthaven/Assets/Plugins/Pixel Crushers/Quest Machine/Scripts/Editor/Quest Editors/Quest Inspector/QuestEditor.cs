@@ -20,7 +20,7 @@ namespace PixelCrushers.QuestMachine
         {
             EditorApplication.projectWindowItemOnGUI += OnProjectWindowItemOnGUI;
             Undo.undoRedoPerformed += RepaintEditorWindow;
-            QuestEditorWindow.currentEditor = this;
+            QuestEditorWindow.currentInspectors.Add(this);
             if (inspectorGUI == null) inspectorGUI = new QuestInspectorGUI();
         }
 
@@ -28,7 +28,7 @@ namespace PixelCrushers.QuestMachine
         {
             EditorApplication.projectWindowItemOnGUI -= OnProjectWindowItemOnGUI;
             Undo.undoRedoPerformed -= RepaintEditorWindow;
-            QuestEditorWindow.currentEditor = null;
+            QuestEditorWindow.currentInspectors.Remove(this);
         }
 
         private void OnProjectWindowItemOnGUI(string guid, Rect selectionRect)

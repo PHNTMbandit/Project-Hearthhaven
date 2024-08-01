@@ -48,10 +48,12 @@ namespace PixelCrushers.QuestMachine
         {
             if (quest != null)
             {
+                if (contentList.Count == 0) Debug.LogWarning($"Quest Machine: Alert Text is empty in {quest.id}");
                 QuestMachineMessages.QuestAlert(quest, quest.id, contentList);
             }
             else // We may be at the end of the quest, and it may have been removed, so pass null for the quest:
             {
+                if (contentList.Count == 0) Debug.LogWarning($"Quest Machine: Alert Text is empty.");
                 QuestMachineMessages.QuestAlert(null, StringField.empty, contentList);
             }
         }

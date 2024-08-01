@@ -72,6 +72,7 @@ namespace PixelCrushers.QuestMachine
             dest.autostartConditionSet = source.autostartConditionSet;
             dest.offerConditionSet = source.offerConditionSet;
             dest.offerContentList = source.offerContentList;
+            dest.infinitelyRepeatable = source.infinitelyRepeatable;
             dest.maxTimes = source.maxTimes;
             dest.cooldownSeconds = source.cooldownSeconds;
             dest.SetStateRaw(source.GetState());

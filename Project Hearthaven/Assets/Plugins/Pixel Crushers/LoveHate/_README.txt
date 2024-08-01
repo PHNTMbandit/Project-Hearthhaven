@@ -1,7 +1,7 @@
 ﻿/*
 --------------------------
         Love/Hate
-     Version 1.10.42
+     Version 1.10.47
         
 Copyright © Pixel Crushers
 --------------------------

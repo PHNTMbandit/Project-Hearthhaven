@@ -196,11 +196,18 @@ namespace PixelCrushers.QuestMachine
 
         public virtual void Show(QuestListContainer questListContainer)
         {
+            showHUD = true;
             if (ShouldBeVisible())
             {
                 Show();
                 Repaint(questListContainer);
             }
+        }
+
+        public override void Hide()
+        {
+            showHUD = false;
+            base.Hide();
         }
 
         public virtual void Toggle(QuestListContainer questListContainer)
@@ -217,11 +224,10 @@ namespace PixelCrushers.QuestMachine
 
         public virtual void Repaint(QuestListContainer questListContainer)
         {
-            if (!isVisible) return;
             this.questListContainer = questListContainer;
-            if (!(enabled && gameObject.activeInHierarchy)) return;
             if (ShouldBeVisible())
             {
+                if (uiPanel != null) uiPanel.Open();
                 if (m_refreshCoroutine == null) m_refreshCoroutine = StartCoroutine(RefreshAtEndOfFrame());
             }
             else

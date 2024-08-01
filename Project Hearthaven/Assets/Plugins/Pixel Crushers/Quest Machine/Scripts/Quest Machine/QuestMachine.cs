@@ -63,6 +63,17 @@ namespace PixelCrushers.QuestMachine
             set { m_debug = value; }
         }
 
+        private static bool m_allowExceptions;
+
+        /// <summary>
+        /// Don't catch and ignore exceptions.
+        /// </summary>
+        public static bool allowExceptions
+        {
+            get { return m_allowExceptions && Debug.isDebugBuild; }
+            set { m_allowExceptions = value; }
+        }
+
         private static bool m_isLoadingGame = false;
 
         /// <summary>
@@ -173,7 +184,7 @@ namespace PixelCrushers.QuestMachine
                 var journal = kvp.Value as QuestJournal;
                 if (journal != null && (string.IsNullOrEmpty(id) || string.Equals(id, kvp.Key))) return journal;
             }
-            return UnityEngine.Object.FindObjectOfType<QuestJournal>();
+            return GameObjectUtility.FindFirstObjectByType<QuestJournal>();
         }
 
         /// <summary>
@@ -601,12 +612,20 @@ namespace PixelCrushers.QuestMachine
                 var guids = AssetDatabase.FindAssets("t:Sprite " + imageName);
                 if (guids.Length > 0)
                 {
-                    try
+                    if (QuestMachine.allowExceptions)
                     {
                         var path = AssetDatabase.GUIDToAssetPath(guids[0]);
                         result = AssetDatabase.LoadAssetAtPath<Sprite>(path);
                     }
-                    catch (System.Exception) { }
+                    else
+                    {
+                        try
+                        {
+                            var path = AssetDatabase.GUIDToAssetPath(guids[0]);
+                            result = AssetDatabase.LoadAssetAtPath<Sprite>(path);
+                        }
+                        catch (System.Exception) { }
+                    }
                 }
 #endif
             }
@@ -629,12 +648,20 @@ namespace PixelCrushers.QuestMachine
                 var guids = AssetDatabase.FindAssets("t:AudioClip " + audioClipName);
                 if (guids.Length > 0)
                 {
-                    try
+                    if (QuestMachine.allowExceptions)
                     {
                         var path = AssetDatabase.GUIDToAssetPath(guids[0]);
                         result = AssetDatabase.LoadAssetAtPath<AudioClip>(path);
                     }
-                    catch (System.Exception) { }
+                    else
+                    {
+                        try
+                        {
+                            var path = AssetDatabase.GUIDToAssetPath(guids[0]);
+                            result = AssetDatabase.LoadAssetAtPath<AudioClip>(path);
+                        }
+                        catch (System.Exception) { }
+                    }
                 }
 #endif
             }

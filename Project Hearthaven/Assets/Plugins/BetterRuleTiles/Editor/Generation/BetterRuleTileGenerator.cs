@@ -49,12 +49,20 @@ namespace VinToolsEditor.BetterRuleTiles
 
             //set variations
             SetVariations(container, tiles);
+            foreach (var tile in tiles) tile.HasVariations = tile.variations.Count > 0;
+
             //copy extended tiling rule to regular tiling rule
             foreach (var tile in tiles)
             {
                 ExportTilingRules(ref tile.m_ExtendedTilingRules, out var tilingRules, out var extras);
                 tile.m_TilingRules = tilingRules;
                 tile.m_ExtraTilingRules = extras;
+
+                //check if there are extra tiling rules
+                tile.HasExtraTilingRules = tile.m_ExtendedTilingRules.Any(t => t.IsCustomOutputSprite);
+
+                //add settings
+                tile.TreatSimilarTilesAsSame = container.settings._treatSimilarTilesAsSame;
             }
 
             //delete unused previous tiles 
@@ -83,12 +91,20 @@ namespace VinToolsEditor.BetterRuleTiles
 
             //set variations
             SetVariations(container, tiles);
+            foreach (var tile in tiles) tile.HasVariations = tile.variations.Count > 0;
+
             //copy extended tiling rule to regular tiling rule
             foreach (var tile in tiles)
             {
                 ExportTilingRules(ref tile.m_ExtendedTilingRules, out var tilingRules, out var extras);
                 tile.m_TilingRules = tilingRules;
                 tile.m_ExtraTilingRules = extras;
+
+                //check if there are extra tiling rules
+                tile.HasExtraTilingRules = tile.m_ExtendedTilingRules.Any(t => t.IsCustomOutputSprite);
+
+                //add settings
+                tile.TreatSimilarTilesAsSame = container.settings._treatSimilarTilesAsSame;
             }
 
             //delete unused previous tiles 
@@ -486,14 +502,14 @@ namespace VinToolsEditor.BetterRuleTiles
 
             return true;
         }
-        static List<ExtendedTilingRule> SortRules(List<ExtendedTilingRule> tilingRules) => tilingRules.OrderByDescending(t => GetNumberOfNeighbors(t)).ToList();
-        static int GetNumberOfNeighbors(RuleTile.TilingRule tr)
+        static List<ExtendedTilingRule> SortRules(List<ExtendedTilingRule> tilingRules) => tilingRules.OrderByDescending(t => GetNeighborPriority(t)).ToList();
+        static int GetNeighborPriority(RuleTile.TilingRule tr)
         {
             int num = 0;
             for (int i = 0; i < tr.m_Neighbors.Count; i++)
             {
-                if (tr.m_Neighbors[i] != Neighbor.Ignore) num++;
-                if (tr.m_Neighbors[i] > 0) num++;
+                if (tr.m_Neighbors[i] != Neighbor.Ignore) num += 100; //add 100 for every non space
+                if (tr.m_Neighbors[i] > 0) num += 5; //add +5 for every connection tile
             }
             return num;
         }

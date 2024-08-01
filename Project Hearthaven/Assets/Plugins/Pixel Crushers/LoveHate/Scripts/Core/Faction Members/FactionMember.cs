@@ -267,7 +267,9 @@ namespace PixelCrushers.LoveHate
             // Find faction manager and faction database:
             if (factionManager == null)
             {
-                factionManager = FindObjectOfType<FactionManager>();
+                factionManager = (FactionManager.instance != null) 
+                    ? FactionManager.instance
+                    : FindObjectOfType<FactionManager>();
             }
             if (factionDatabase == null)
             {

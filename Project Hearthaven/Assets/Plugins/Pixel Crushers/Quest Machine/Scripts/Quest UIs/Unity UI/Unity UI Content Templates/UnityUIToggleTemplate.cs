@@ -57,13 +57,20 @@ namespace PixelCrushers.QuestMachine
 
         protected virtual void OnToggleChanged(bool value)
         {
-            try
+            if (QuestMachine.allowExceptions)
             {
                 onToggleChanged.Invoke(value, m_data);
             }
-            catch (Exception e) // Don't let exceptions in user-added events break our code.
+            else
             {
-                if (Debug.isDebugBuild) Debug.LogException(e);
+                try
+                {
+                    onToggleChanged.Invoke(value, m_data);
+                }
+                catch (Exception e) // Don't let exceptions in user-added events break our code.
+                {
+                    if (Debug.isDebugBuild) Debug.LogException(e);
+                }
             }
         }
 

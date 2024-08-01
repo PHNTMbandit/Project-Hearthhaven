@@ -259,11 +259,15 @@ namespace PixelCrushers.QuestMachine
         public virtual void ShowCompletedQuest(QuestParticipantTextInfo speaker, List<Quest> quests)
         {
             if (quests == null || quests.Count == 0) return;
-            var quest = quests[0];
-            var contents = quest.GetContentList(QuestContentCategory.Dialogue);
-            ShowContents(speaker, contents);
-            SetControlButtons(true, false, false);
-            if (ContainsGroupButton(contents)) SetControlButtonsInteractable(false);
+            foreach (var quest in quests)
+            {
+                if (quest == null) continue;
+                var contents = quest.GetContentList(QuestContentCategory.Dialogue);
+                if (contents.Count == 0) continue;
+                ShowContents(speaker, contents);
+                SetControlButtons(true, false, false);
+                if (ContainsGroupButton(contents)) SetControlButtonsInteractable(false);
+            }
         }
 
         public virtual void ShowQuestList(QuestParticipantTextInfo speaker, List<QuestContent> activeQuestsContents, List<Quest> activeQuests,

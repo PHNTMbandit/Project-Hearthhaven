@@ -143,11 +143,21 @@ namespace VinToolsEditor.BetterRuleTiles
 
 
             //highlight modified cells
-            if (window._showModified) foreach (var item in window._file.Grid.Where(t => t.IsModified))
-            {
-                if (Mathf.FloorToInt((float)EditorApplication.timeSinceStartup * 5f) % 2 == 0) DrawGridTileOutline(item.Position, t_modifiedTexture);
-                else DrawGridTileOutline(item.Position, t_modifiedDarkTexture);
-            }
+            if (window._showModified)
+                foreach (var tile in window._file.Grid.Where(t => t.AreNeighborPositionsModified || t.AreOutputSpritesModified))
+                {
+                    bool cycle = Mathf.FloorToInt((float)EditorApplication.timeSinceStartup * 5f) % 2 == 0;
+
+
+                    if (cycle)
+                    {
+                        if (tile.AreOutputSpritesModified) DrawGridTileOutline(tile.Position, Vector2Int.one, new Color(1f, 210f / 255f, 1f));
+                    }
+                    else
+                    {
+                        if (tile.AreNeighborPositionsModified) DrawGridTileOutline(tile.Position, Vector2Int.one, new Color(1f, 1f, 210f / 255f));
+                    }
+                }
 
             //draw preset blocks
             DrawPresetBlocksOverlay(window._file._presetBlocks);

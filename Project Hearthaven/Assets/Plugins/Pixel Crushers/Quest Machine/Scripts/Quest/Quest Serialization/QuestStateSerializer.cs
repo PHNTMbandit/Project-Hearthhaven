@@ -63,13 +63,20 @@ namespace PixelCrushers.QuestMachine
             {
                 using (var binaryReader = new BinaryReader(memoryStream))
                 {
-                    try
+                    if (QuestMachine.allowExceptions)
                     {
                         ReadQuestDataFromStream(binaryReader, quest);
                     }
-                    catch (System.Exception e)
+                    else
                     {
-                        if (allowThrowExceptions) throw e;
+                        try
+                        {
+                            ReadQuestDataFromStream(binaryReader, quest);
+                        }
+                        catch (System.Exception e)
+                        {
+                            if (allowThrowExceptions) throw e;
+                        }
                     }
                 }
             }
@@ -239,11 +246,11 @@ namespace PixelCrushers.QuestMachine
         {
             conditionSet.numTrueConditions = Mathf.Clamp(binaryReader.ReadByte(), 0, conditionSet.conditionList.Count);
             int numConditions = (savedVersion >= 3) ? binaryReader.ReadByte() : conditionSet.conditionList.Count;
-            if (version >= 2)
+            if (savedVersion >= 2)
             {
                 for (int i = 0; i < numConditions; i++)
                 {
-                    if (conditionSet.conditionList[i] == null) continue;
+                    if (conditionSet.conditionList[i] == null || !binaryReader.BaseStream.CanRead) continue;
                     if (i < conditionSet.conditionList.Count)
                     {
                         conditionSet.conditionList[i].alreadyTrue = binaryReader.ReadBoolean();

@@ -366,7 +366,18 @@ namespace PixelCrushers.QuestMachine
                 new StringField(message), new StringField(parameter), value);
         }
 
+        public ParentQuestCondition AddParentCondition(QuestNode node, ConditionCountMode parentCountMode, int minParentCount = 1)
+        {
+            var condition = ParentQuestCondition.CreateInstance<ParentQuestCondition>();
+            condition.name = "parentCondition";
+            condition.parentCountMode = parentCountMode;
+            condition.minParentCount = minParentCount;
+            node.conditionSet.conditionList.Add(condition);
+            return condition;
+        }
+
         #endregion
+
 
         #region Actions
 

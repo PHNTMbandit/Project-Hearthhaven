@@ -49,8 +49,6 @@ namespace ProjectHearthaven.Vehicles.Train
         public TrainDepartingState DepartingState { get; private set; }
         public TrainWaitingState WaitingState { get; private set; }
 
-        public UnityEvent onTrainDeparting;
-
         private void Awake()
         {
             StateMachine = new();
@@ -82,8 +80,6 @@ namespace ProjectHearthaven.Vehicles.Train
         public void DepartTrain()
         {
             StateMachine.ChangeState(DepartingState);
-
-            onTrainDeparting?.Invoke();
         }
 
         public void ResetTrain()

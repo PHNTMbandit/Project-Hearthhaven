@@ -41,6 +41,7 @@ MonoBehaviour:
   _tileObjects:
   - {fileID: 1422357396726750172}
   - {fileID: 502698257561488442}
+  _hexTileObjects: []
   _grid:
   - Position: {x: 11, y: 1}
     Sprite: {fileID: 0}
@@ -12811,7 +12812,8 @@ MonoBehaviour:
     m_Patternsize: {x: 1, y: 1}
   - m_ExtendedOutputSprite: 0
     m_Patternsize: {x: 1, y: 1}
-  DebugMode: 0
+  HasVariations: 0
+  HasExtraTilingRules: 0
 --- !u!114 &1422357396726750172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14056,4 +14058,5 @@ MonoBehaviour:
     m_Patternsize: {x: 1, y: 1}
   - m_ExtendedOutputSprite: 0
     m_Patternsize: {x: 1, y: 1}
-  DebugMode: 0
+  HasVariations: 0
+  HasExtraTilingRules: 0

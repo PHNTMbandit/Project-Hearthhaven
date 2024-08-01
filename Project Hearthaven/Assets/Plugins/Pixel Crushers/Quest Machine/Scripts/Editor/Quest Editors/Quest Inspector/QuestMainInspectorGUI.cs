@@ -64,6 +64,7 @@ namespace PixelCrushers.QuestMachine
                 var isAbandonableProperty = serializedObject.FindProperty("m_isAbandonable");
                 var rememberIfAbandonedProperty = serializedObject.FindProperty("m_rememberIfAbandoned");
                 var deleteWhenCompleteProperty = serializedObject.FindProperty("m_deleteWhenComplete");
+                var infinitelyRepeatableProperty = serializedObject.FindProperty("m_infinitelyRepeatable");
                 var maxTimesProperty = serializedObject.FindProperty("m_maxTimes");
                 var timesAcceptedProperty = serializedObject.FindProperty("m_timesAccepted");
                 var cooldownSecondsProperty = serializedObject.FindProperty("m_cooldownSeconds");
@@ -90,7 +91,7 @@ namespace PixelCrushers.QuestMachine
                     iconProperty == null || questGiverIDProperty == null || isTrackableProperty == null || showInTrackHUDProperty == null ||
                     isAbandonableProperty == null || rememberIfAbandonedProperty == null || maxTimesProperty == null ||
                     timesAcceptedProperty == null || cooldownSecondsProperty == null || noRepeatIfSuccessfulProperty == null ||
-                    saveAllIfWaitingToStartProperty == null || stateProperty == null) return;
+                    saveAllIfWaitingToStartProperty == null || stateProperty == null || infinitelyRepeatableProperty == null) return;
 
                 EditorGUILayout.PropertyField(idProperty, true);
                 EditorGUI.BeginChangeCheck();
@@ -119,8 +120,12 @@ namespace PixelCrushers.QuestMachine
                 EditorGUILayout.PropertyField(isAbandonableProperty);
                 if (isAbandonableProperty.boolValue) EditorGUILayout.PropertyField(rememberIfAbandonedProperty);
                 if (deleteWhenCompleteProperty != null) EditorGUILayout.PropertyField(deleteWhenCompleteProperty);
-                EditorGUILayout.PropertyField(maxTimesProperty);
-                if (maxTimesProperty.intValue > 1)
+                EditorGUILayout.PropertyField(infinitelyRepeatableProperty);
+                if (infinitelyRepeatableProperty.boolValue == false)
+                {
+                    EditorGUILayout.PropertyField(maxTimesProperty);
+                }
+                if (maxTimesProperty.intValue > 1 || infinitelyRepeatableProperty.boolValue)
                 {
                     EditorGUILayout.PropertyField(cooldownSecondsProperty);
                     EditorGUILayout.PropertyField(noRepeatIfSuccessfulProperty);

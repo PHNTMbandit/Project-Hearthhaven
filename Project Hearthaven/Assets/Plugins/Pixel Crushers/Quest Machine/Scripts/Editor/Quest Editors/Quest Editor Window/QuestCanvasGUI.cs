@@ -457,6 +457,7 @@ namespace PixelCrushers.QuestMachine
                         QuestEditorWindow.selectedNodeListIndex = i;
                         QuestEditorWindow.selectedNodeListIndices.Clear();
                         QuestEditorWindow.selectedNodeListIndices.Add(i);
+                        QuestEditorWindow.RepaintInspectorsNow();
                     }
                     if (QuestEditorWindow.selectedNodeListIndices.Count == 1)
                     {
@@ -473,7 +474,7 @@ namespace PixelCrushers.QuestMachine
             if (!clickedOnNode) QuestEditorWindow.selectedNodeListIndex = -1;
             QuestEditorWindow.SetSelectionToQuest();
             QuestEditorWindow.RepaintNow();
-            QuestEditorWindow.RepaintCurrentEditorNow();
+            QuestEditorWindow.RepaintInspectorsNow();
             return clickedOnNode;
         }
 
@@ -540,6 +541,17 @@ namespace PixelCrushers.QuestMachine
             UnityEngine.Assertions.Assert.IsNotNull(childIndexListProperty, "Quest Machine: Internal error - m_childIndexList property is null in ClearConnections().");
             if (childIndexListProperty == null) return;
             childIndexListProperty.arraySize = 0;
+        }
+
+        private void ChangeNodeType(int sourceIndex, QuestNodeType newNodeType)
+        {
+            ChangeNodeType(m_nodeListProperty.GetArrayElementAtIndex(sourceIndex), newNodeType);
+        }
+
+        private void ChangeNodeType(SerializedProperty nodeProperty, QuestNodeType newNodeType)
+        {
+            if (nodeProperty == null) return;
+            nodeProperty.FindPropertyRelative("m_nodeType").enumValueIndex = (int)newNodeType;
         }
 
         #endregion
@@ -628,7 +640,13 @@ namespace PixelCrushers.QuestMachine
                 menu.AddItem(new GUIContent("New Node/Failure"), false, ContextCallback, new CallbackArgs(CallbackType.Add, QuestNodeType.Failure, Event.current.mousePosition, clickedIndex));
                 menu.AddSeparator("");
                 if (clickedIndex >= 0)
-                { // Right-clicked on a node:
+                {
+                    // Right-clicked on a node:
+                    menu.AddItem(new GUIContent("Change Type/Passthrough"), false, ContextCallback, new CallbackArgs(CallbackType.ChangeType, QuestNodeType.Passthrough, Event.current.mousePosition, clickedIndex));
+                    menu.AddItem(new GUIContent("Change Type/Condition"), false, ContextCallback, new CallbackArgs(CallbackType.ChangeType, QuestNodeType.Condition, Event.current.mousePosition, clickedIndex));
+                    menu.AddItem(new GUIContent("Change Type/Success"), false, ContextCallback, new CallbackArgs(CallbackType.ChangeType, QuestNodeType.Success, Event.current.mousePosition, clickedIndex));
+                    menu.AddItem(new GUIContent("Change Type/Failure"), false, ContextCallback, new CallbackArgs(CallbackType.ChangeType, QuestNodeType.Failure, Event.current.mousePosition, clickedIndex));
+                    menu.AddSeparator("");
                     menu.AddItem(new GUIContent("Clear Connections"), false, ContextCallback, new CallbackArgs(CallbackType.ClearConnections, clickedIndex));
                     if (QuestEditorWindow.selectedNodeListIndices.Count > 1)
                     {
@@ -684,7 +702,7 @@ namespace PixelCrushers.QuestMachine
             EditorGUIZoomArea.Begin(m_zoom, m_zoomArea); // Resume zoom.
         }
 
-        private enum CallbackType { Add, Delete, ClearConnections, SetState, ArrangeNodes, Copy, Paste }
+        private enum CallbackType { Add, Delete, ChangeType, ClearConnections, SetState, ArrangeNodes, Copy, Paste }
 
         private struct CallbackArgs
         {
@@ -734,6 +752,9 @@ namespace PixelCrushers.QuestMachine
             {
                 case CallbackType.Add:
                     AddNode(args.questNodeType, args.mousePosition, args.clickedIndex);
+                    break;
+                case CallbackType.ChangeType:
+                    ChangeNodeType(args.clickedIndex, args.questNodeType);
                     break;
                 case CallbackType.ClearConnections:
                     ClearConnections(args.clickedIndex);
@@ -869,7 +890,7 @@ namespace PixelCrushers.QuestMachine
             }
             QuestEditorWindow.selectedNodeListIndex = -1;
             QuestEditorWindow.RepaintNow();
-            QuestEditorWindow.RepaintCurrentEditorNow();
+            QuestEditorWindow.RepaintInspectorsNow();
         }
 
         private void RemoveParentConnectionsTo(int childIndex)
@@ -1267,7 +1288,7 @@ namespace PixelCrushers.QuestMachine
             QuestEditorWindow.selectedNodeListIndex = -1;
             QuestEditorWindow.SetSelectionToQuest();
             QuestEditorWindow.RepaintNow();
-            QuestEditorWindow.RepaintCurrentEditorNow();
+            QuestEditorWindow.RepaintInspectorsNow();
         }
 
         private void OpenTagsToTextTableWizard()

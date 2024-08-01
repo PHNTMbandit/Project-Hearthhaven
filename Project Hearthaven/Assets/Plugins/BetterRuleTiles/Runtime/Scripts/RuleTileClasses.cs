@@ -27,6 +27,21 @@ namespace VinTools.BetterRuleTiles.Internal
             }
         }
 
+        public bool IsCustomOutputSprite
+        {
+            get
+            {
+                switch (m_ExtendedOutputSprite)
+                {
+                    case ExtendedOutputSprite.Single: return false;
+                    case ExtendedOutputSprite.Random: return false;
+                    case ExtendedOutputSprite.Animation: return false;
+                    case ExtendedOutputSprite.Pattern: return true;
+                    default: return true;
+                }
+            }
+        }
+
         public TilingRule ExportTilingRule() => ExportTilingRule(this);
         public static TilingRule ExportTilingRule(ExtendedTilingRule rule)
         {

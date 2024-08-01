@@ -4,6 +4,63 @@ Copyright © Pixel Crushers
 RELEASE NOTES
 -------------
 
+Version 1.2.47:
+[July 15, 2024]
+- Improved: In Alert quest action, now logs warning if alert text list is empty.
+- Fixed: If all quests for quest giver are complete & none have successful/failed content, now shows show No Quests content.
+- Fixed: Condition checking wasn't restarted in some scenarios when reverting a quest node from true to active again.
+- Fixed: If quest list container (e.g,. Quest Giver or Quest Journal) is deactivated while loading save data, it now still runs its cleanup.
+- Fixed: Tag dictionary copying when cloning quests.
+- Save System: Added Loading Screen Progress Bar component.
+- Dialogue System: Added QM To DS tool option to copy QM quest node IDs to DS quest entries.
+- RPG Builder: Added video tutorial; made minor corrections in PDF manual; added entry info for extra quest giver text in dialogue UI.
+
+
+Version 1.2.46:
+[May 27, 2024]
+- Updated for Unity 6.
+- Improved: Can now configure Quest Machine Debug section to allow QM exceptions & message system exceptions to help debug user code.
+- Improved: Added InputDeviceManager.cursorLockMode if you want to change default cursor lock mode from Locked to Confined.
+- Fixed: UnityUIQuestHUD.Show() now opens UIPanel if it's closed.
+- Fixed: SaveSystem.saveDataApplied is now still invoked even if scene has no savers.
+- articy:draft X: Added integration.
+- Input System: Monitors InputSystem.onDeviceChange. No need to configure Joystick/Keyboard inputs To Watch.
+- Playmaker: SetHUD action no longer requires quest list container (e.g., Quest Journal) on target.
+
+
+Version 1.2.45:
+[April 6, 2024]
+- Improved: Added QuestBuilder.AddParentCondition() method.
+- Fixed: Disabled right-click context menu in quest editor inspector lists to prevent copy by reference.
+- Fixed: Quest.isAsset is now set false in instantiated copies of quests; autostart checking is not run on quests whose isAsset is true.
+- Adventure Creator: Updated for 1.80 and AC's new asmdefs.
+- Compass Navigator Pro: Updated for version 2.
+
+
+Version 1.2.44.1:
+[March 14, 2024]
+- Adventure Creator: Updated for AC 1.80.
+- TopDown Engine: Improved pausing and unpausing during conversations to handle all known edge cases.
+
+
+Version 1.2.44:
+[March 12, 2024]
+- Added: Option to queue alerts in quest alert UI.
+- Improved: Quest Editor now has context menu item to change node's type.
+- Save System: Spawned Object Manager can now restore saved data to respawned objects even when Frames To Wait is zero; restoring savers on respawned objects is now on by default.
+- Input System: Fixed "any key" and mouse buttons reading isPressed instead of wasPressedThisFrame.
+
+
+Version 1.2.43:
+[February 15, 2024]
+- Added: Infinite repeat checkbox to quests.
+- Improved: Text Table Editor now has gear menu > Import > From Localize UI menu feature.
+- Fixed: When multiple inspectors are open on quest, changes in Quest Editor now update all inspectors.
+- Fixed: SetLocalizedFonts now listens for UILocalizationManager.languageChanged events.
+- Emerald AI: Added support for Emerald AI 2024.
+- Invector character controllers: Updated for 2.6.4.
+
+
 Version 1.2.42:
 [December 21, 2023]
 - Improved: Can now export text of all quests in quest database to text table in one operation.

@@ -1,3 +1,4 @@
+using ProjectHearthaven.Player;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -24,8 +25,9 @@ namespace ProjectHearthaven.Vehicles.Train
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.CompareTag("Player"))
+            if (other.TryGetComponent(out PlayerStateController player))
             {
+                player.BoardTrain();
                 _trainController.DepartTrain();
                 HasPlayer = true;
             }

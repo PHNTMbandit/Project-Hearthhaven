@@ -46,7 +46,7 @@ namespace PixelCrushers.QuestMachine
                 MoveTextToTextTable(quest, textTable, abbreviateFieldNames, prependQuestIDs);
                 EditorUtility.SetDirty(quest);
                 QuestEditorWindow.RepaintNow();
-                QuestEditorWindow.RepaintCurrentEditorNow();
+                QuestEditorWindow.RepaintInspectorsNow();
             }
         }
 

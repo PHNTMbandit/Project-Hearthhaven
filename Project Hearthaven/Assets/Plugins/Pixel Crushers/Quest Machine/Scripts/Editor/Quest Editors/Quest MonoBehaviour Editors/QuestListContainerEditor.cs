@@ -26,7 +26,7 @@ namespace PixelCrushers.QuestMachine
         protected virtual void OnEnable()
         {
             Undo.undoRedoPerformed += RepaintEditorWindow;
-            QuestEditorWindow.currentEditor = this;
+            QuestEditorWindow.currentInspectors.Add(this);
             questSerializedObject = null;
             inspectorGUI = new QuestInspectorGUI();
             var notPlaying = !Application.isPlaying;
@@ -51,7 +51,7 @@ namespace PixelCrushers.QuestMachine
         protected virtual void OnDisable()
         {
             Undo.undoRedoPerformed -= RepaintEditorWindow;
-            QuestEditorWindow.currentEditor = null;
+            QuestEditorWindow.currentInspectors.Remove(this);
         }
 
         protected void RepaintEditorWindow()

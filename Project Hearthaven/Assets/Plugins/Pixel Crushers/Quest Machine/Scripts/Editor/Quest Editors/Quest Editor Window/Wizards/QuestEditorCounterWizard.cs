@@ -127,7 +127,7 @@ namespace PixelCrushers.QuestMachine
 
             // Refresh editor windows:
             QuestEditorWindow.RepaintNow(); // Quest Editor window.
-            QuestEditorWindow.RepaintCurrentEditorNow(); // Inspector.
+            QuestEditorWindow.RepaintInspectorsNow(); // Inspector.
         }
 
         protected void AddBodyContent(List<QuestContent> contentList, string text)

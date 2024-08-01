@@ -41,7 +41,7 @@ namespace ProjectHearthaven.Player
             _playerStates[0] = EnterTrainState = new(this, "moving");
             _playerStates[1] = ExitTrainState = new(this, "moving");
             _playerStates[2] = IdleState = new(this, "idle");
-            _playerStates[3] = OnTrainState = new(this, "idle");
+            _playerStates[3] = OnTrainState = new(this, "on train");
             _playerStates[4] = WalkState = new(this, "moving");
 
             StateMachine.Initialise(IdleState);

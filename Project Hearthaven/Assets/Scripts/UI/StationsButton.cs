@@ -4,6 +4,7 @@ using ProjectHearthaven.Data;
 using ProjectHearthaven.Vehicles.Train;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace ProjectHearthaven.UI
 {
@@ -30,9 +31,13 @@ namespace ProjectHearthaven.UI
         [SerializeField]
         private CharacterBankAccount _player;
 
+        [SerializeField]
+        private Button _button;
+
         public void SetStation(Station station)
         {
             Station = station;
+            _button.interactable = _player.CanAfford(Station.cost);
         }
 
         public void SetName(string name)
@@ -47,11 +52,14 @@ namespace ProjectHearthaven.UI
 
         public void OnClick()
         {
-            _train.CallTrain(Station);
-            _player.RemoveDollars(Station.cost);
-            _ticketGate.SetInteractable(false);
-            _ticketGateAnimator.SetState("open");
-            _stationsPanel.Close();
+            if (_player.CanAfford(Station.cost))
+            {
+                _train.CallTrain(Station);
+                _player.RemoveDollars(Station.cost);
+                _ticketGate.SetInteractable(false);
+                _ticketGateAnimator.SetState("open");
+                _stationsPanel.Close();
+            }
         }
     }
 }

@@ -48,7 +48,7 @@ namespace ProjectHearthaven.Savers
             }
 
             _data = data;
-            _stateController.StateMachine.Initialise(
+            _stateController.StateMachine.ChangeState(
                 _stateController.GetPlayerState(data.playerStateName)
             );
         }

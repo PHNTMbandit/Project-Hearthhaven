@@ -105,7 +105,7 @@ namespace PixelCrushers.QuestMachine
 
             // Refresh editor windows:
             QuestEditorWindow.RepaintNow(); // Quest Editor window.
-            QuestEditorWindow.RepaintCurrentEditorNow(); // Inspector.
+            QuestEditorWindow.RepaintInspectorsNow(); // Inspector.
         }
     }
 }

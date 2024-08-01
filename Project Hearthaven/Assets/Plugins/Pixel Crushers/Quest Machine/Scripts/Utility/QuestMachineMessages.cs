@@ -406,7 +406,7 @@ namespace PixelCrushers.QuestMachine
             //    if (string.Equals(entity.id, id)) return entity.gameObject;
             //}
 
-            var monobehaviours = GameObject.FindObjectsOfType<MonoBehaviour>();
+            var monobehaviours = GameObjectUtility.FindObjectsByType<MonoBehaviour>();
             for (int i = 0; i < monobehaviours.Length; i++)
             {
                 var identifiable = (monobehaviours[i] as IQuestMachineID);
