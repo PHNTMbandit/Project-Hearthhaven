@@ -161,13 +161,20 @@ namespace PixelCrushers.QuestMachine
                 var informDataSync = (updateMode == QuestCounterUpdateMode.DataSync) && (setValueMode != QuestCounterSetValueMode.DontInformDataSync);
                 if (informDataSync) MessageSystem.SendMessage(this, DataSynchronizer.RequestDataSourceChangeValueMessage, name, currentValue);
                 QuestMachineMessages.QuestCounterChanged(this, questID, name, currentValue);
-                try
+                if (QuestMachine.allowExceptions)
                 {
                     changed(this);
                 }
-                catch (Exception e) // Don't let exceptions in user-added events break our code.
+                else
                 {
-                    if (Debug.isDebugBuild) Debug.LogException(e);
+                    try
+                    {
+                        changed(this);
+                    }
+                    catch (Exception e) // Don't let exceptions in user-added events break our code.
+                    {
+                        if (Debug.isDebugBuild) Debug.LogException(e);
+                    }
                 }
             }
         }

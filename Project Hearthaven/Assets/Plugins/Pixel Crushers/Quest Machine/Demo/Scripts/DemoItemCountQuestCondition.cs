@@ -28,7 +28,7 @@
 
         private bool IsTrue()
         {
-            var demoInventory = FindObjectOfType<DemoInventory>();
+            var demoInventory = GameObjectUtility.FindFirstObjectByType<DemoInventory>();
             if (demoInventory != null)
             {
                 var itemCount = demoInventory.GetItemCount((int)itemType);

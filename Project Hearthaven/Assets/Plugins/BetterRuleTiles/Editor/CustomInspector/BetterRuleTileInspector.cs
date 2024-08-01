@@ -49,10 +49,10 @@ namespace VinToolsEditor.BetterRuleTiles
                     style.alignment = TextAnchor.MiddleCenter;
                     style.fontSize = 10;
                     GUI.Label(rect, neighbor.ToString(), style);
-                    break;
+                    return;
             }
 
-            base.RuleOnGUI(rect, position, neighbor);
+            //base.RuleOnGUI(rect, position, neighbor);
         }
     }
 }

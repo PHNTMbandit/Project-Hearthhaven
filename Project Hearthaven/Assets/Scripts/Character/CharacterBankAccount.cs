@@ -47,5 +47,10 @@ namespace ProjectHearthaven.Character
         {
             return CurrentBalance >= amount;
         }
+
+        public bool CanAfford(int amount)
+        {
+            return (CurrentBalance - amount) >= 0;
+        }
     }
 }

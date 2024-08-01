@@ -7,6 +7,7 @@ namespace ProjectHearthaven.Capabilities
     [AddComponentMenu("Capabilities/Interactable")]
     public class Interactable : MonoBehaviour
     {
+        [ShowInInspector]
         public bool IsInteractable { get; private set; } = true;
 
         [field: PreviewField(Alignment = ObjectFieldAlignment.Left), SerializeField]

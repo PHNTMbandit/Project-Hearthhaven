@@ -240,7 +240,7 @@ namespace PixelCrushers.QuestMachine
         {
             get 
             {
-                if (m_instance == null) m_instance = FindObjectOfType<QuestMachineConfiguration>();
+                if (m_instance == null) m_instance = GameObjectUtility.FindFirstObjectByType<QuestMachineConfiguration>();
                 return m_instance;
             }
         }
@@ -267,6 +267,7 @@ namespace PixelCrushers.QuestMachine
             }
             m_instance = this;
             QuestMachine.debug = debugSettings.debug;
+            QuestMachine.allowExceptions = debugSettings.allowExceptions;
             RegisterQuestDatabases();
             AddInstance(this);
             HideUIs();
@@ -303,6 +304,7 @@ namespace PixelCrushers.QuestMachine
             QuestMachine.prettyPrintJson = prettyPrintJson;
             QuestMachine.debug = debugSettings.debug;
             MessageSystem.debug = debugSettings.debugMessageSystem;
+            MessageSystem.allowExceptions = debugSettings.allowMessageSystemExceptions;
             QuestGenerator.detailedDebug = debugSettings.debugQuestGenerator;
             QuestGenerator.maxSimultaneousPlanners = generatorSettings.maxSimultaneousPlanners;
             QuestGenerator.maxGoalActionChecksPerFrame = generatorSettings.maxGoalActionChecksPerFrame;
@@ -345,13 +347,20 @@ namespace PixelCrushers.QuestMachine
             QuestMachine.debug = false;
             MessageSystem.debug = false;
             isQuitting = true;
-            try
+            if (QuestMachine.allowExceptions)
             {
                 quitting();
             }
-            catch (System.Exception e)
+            else
             {
-                Debug.LogException(e, this);
+                try
+                {
+                    quitting();
+                }
+                catch (System.Exception e)
+                {
+                    Debug.LogException(e, this);
+                }
             }
         }
 
@@ -402,6 +411,14 @@ namespace PixelCrushers.QuestMachine
         [SerializeField]
         private bool m_debugMessageSystem;
 
+        [Tooltip("Allow Quest Machine to throw exceptions without catching them. To also allow Message System listener exceptions to filter up without catching them, tick the checkbox below, too.")]
+        [SerializeField]
+        private bool m_allowExceptions;
+
+        [Tooltip("Allow Message System listeners to throw exceptions without catching them.")]
+        [SerializeField]
+        private bool m_allowMessageSystemExceptions;
+
         [Tooltip("Log verbose Quest Generator info to the Console.")]
         [SerializeField]
         private bool m_debugQuestGenerator;
@@ -422,6 +439,24 @@ namespace PixelCrushers.QuestMachine
         {
             get { return m_debugMessageSystem; }
             set { m_debugMessageSystem = value; }
+        }
+
+        /// <summary>
+        /// Allow Quest Machine to throw exceptions without catching them
+        /// </summary>
+        public bool allowExceptions
+        {
+            get { return m_allowExceptions; }
+            set { m_allowExceptions = value; }
+        }
+
+        /// <summary>
+        /// Allow Message System listeners to throw exceptions without catching them.
+        /// </summary>
+        public bool allowMessageSystemExceptions
+        {
+            get { return m_allowMessageSystemExceptions; }
+            set { m_allowMessageSystemExceptions = value; }
         }
 
         /// <summary>

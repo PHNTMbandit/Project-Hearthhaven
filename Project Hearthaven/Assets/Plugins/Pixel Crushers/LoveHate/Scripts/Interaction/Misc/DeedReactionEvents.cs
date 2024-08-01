@@ -57,6 +57,14 @@ namespace PixelCrushers.LoveHate
         private Animator m_animator = null;
         private float m_timeWhenCanReact = 0;
 
+        public FactionMember self => m_self;
+        public Animator animator => m_animator;
+
+        /// <summary>
+        /// Next GameTime.time when this faction member can react to witnessing a deed.
+        /// </summary>
+        public float timeWhenCanReact => m_timeWhenCanReact;
+
         protected virtual void Awake()
         {
             m_self = GetComponentInChildren<FactionMember>() ?? GetComponentInParent<FactionMember>();
@@ -65,7 +73,7 @@ namespace PixelCrushers.LoveHate
 
         public void OnWitnessDeed(Rumor rumor)
         {
-            if (rumor == null || m_self == null || m_animator == null || GameTime.time < m_timeWhenCanReact) return;
+            if (rumor == null || m_self == null || GameTime.time < m_timeWhenCanReact) return;
             m_timeWhenCanReact = GameTime.time + timeBetweenReactions;
             for (int i = 0; i < reactions.Length; i++)
             {

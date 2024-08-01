@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf43673b89acb484b907a8b9ace39472, type: 3}
   m_Name: Dirt
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: -1677260544633098824, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+  m_DefaultSprite: {fileID: -1677260544633098824, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+    type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules:
@@ -1105,6 +1106,8 @@ MonoBehaviour:
     m_Patternsize: {x: 1, y: 1}
   - m_ExtendedOutputSprite: 0
     m_Patternsize: {x: 1, y: 1}
+  HasVariations: 0
+  HasExtraTilingRules: 0
 --- !u!114 &-6512768599546563776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1117,7 +1120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf43673b89acb484b907a8b9ace39472, type: 3}
   m_Name: Stone
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: -6399861423333123127, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+  m_DefaultSprite: {fileID: -6399861423333123127, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+    type: 3}
   m_DefaultGameObject: {fileID: 0}
   m_DefaultColliderType: 1
   m_TilingRules:
@@ -2210,6 +2214,8 @@ MonoBehaviour:
     m_Patternsize: {x: 1, y: 1}
   - m_ExtendedOutputSprite: 0
     m_Patternsize: {x: 1, y: 1}
+  HasVariations: 0
+  HasExtraTilingRules: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2224,10 +2230,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings:
     _gridShape: 0
-    _zoomAmount: 1.275158
+    _zoomAmount: 0.53550506
     _gridCellSize: {x: 32, y: 32}
     _tileRenderOffset: {x: 0, y: 0}
-    _gridOffset: {x: 1203.9639, y: 389.99493}
+    _gridOffset: {x: 668.68695, y: 237.05435}
     _lockWindows: 1
     _hideSprites: 0
     _showRuler: 1
@@ -2308,7 +2314,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 6, y: 5}
-    Sprite: {fileID: -2455775453941419483, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -2455775453941419483, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -2362,7 +2369,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 6, y: 7}
-    Sprite: {fileID: 1919852563886843932, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: 1919852563886843932, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -2443,7 +2451,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 7, y: 6}
-    Sprite: {fileID: 7747969498277567530, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: 7747969498277567530, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -2497,7 +2506,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 8, y: 5}
-    Sprite: {fileID: -1360409950514755245, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -1360409950514755245, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -2524,7 +2534,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 8, y: 7}
-    Sprite: {fileID: -3268497425394815164, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -3268497425394815164, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -2794,7 +2805,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 12, y: 6}
-    Sprite: {fileID: -7333667465980939252, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -7333667465980939252, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -2848,7 +2860,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 13, y: 7}
-    Sprite: {fileID: -1338530704310333808, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -1338530704310333808, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -2902,7 +2915,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 14, y: 6}
-    Sprite: {fileID: 5060518175605648744, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: 5060518175605648744, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -2956,7 +2970,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 13, y: 5}
-    Sprite: {fileID: 2876289842292397269, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: 2876289842292397269, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -3145,7 +3160,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 14, y: -1}
-    Sprite: {fileID: 3511303046735141340, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: 3511303046735141340, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -3172,7 +3188,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 12, y: 1}
-    Sprite: {fileID: -5086438056879495722, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -5086438056879495722, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -3199,7 +3216,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 14, y: 1}
-    Sprite: {fileID: -4169188284693801165, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -4169188284693801165, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -3658,7 +3676,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 6, y: 1}
-    Sprite: {fileID: -6747421613608841231, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -6747421613608841231, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -4117,7 +4136,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 0, y: -1}
-    Sprite: {fileID: -5292647261990834348, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -5292647261990834348, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -4144,7 +4164,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 2, y: -1}
-    Sprite: {fileID: -3638206246315484973, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -3638206246315484973, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -4225,7 +4246,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -2, y: -1}
-    Sprite: {fileID: -1288263786353817358, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -1288263786353817358, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -4279,7 +4301,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 0, y: -3}
-    Sprite: {fileID: -2252955222662681551, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -2252955222662681551, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -4360,7 +4383,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 2, y: -3}
-    Sprite: {fileID: -1905652470267465447, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -1905652470267465447, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -4495,7 +4519,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -2, y: -3}
-    Sprite: {fileID: 2483181217229616039, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: 2483181217229616039, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -4603,7 +4628,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 0, y: 1}
-    Sprite: {fileID: -2112737299535947800, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -2112737299535947800, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -4684,7 +4710,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 2, y: 1}
-    Sprite: {fileID: -601677842210107440, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -601677842210107440, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -4819,7 +4846,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -2, y: 1}
-    Sprite: {fileID: -3619114268394944511, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -3619114268394944511, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -4927,7 +4955,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -1, y: -7}
-    Sprite: {fileID: -8443642464835747935, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -8443642464835747935, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -4954,7 +4983,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 1, y: -7}
-    Sprite: {fileID: -5458343138778018379, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -5458343138778018379, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -4981,7 +5011,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -1, y: -9}
-    Sprite: {fileID: 8296768581933770509, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: 8296768581933770509, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -5008,7 +5039,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 1, y: -9}
-    Sprite: {fileID: 4096599733341001204, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: 4096599733341001204, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -5602,7 +5634,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -1, y: 7}
-    Sprite: {fileID: -9120626113919346638, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -9120626113919346638, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -5656,7 +5689,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -1, y: 5}
-    Sprite: {fileID: 8935116391671119923, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: 8935116391671119923, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -5710,7 +5744,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 1, y: 5}
-    Sprite: {fileID: 5440291298764554988, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: 5440291298764554988, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -5764,7 +5799,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 1, y: 7}
-    Sprite: {fileID: 8915606343298973229, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: 8915606343298973229, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -6358,7 +6394,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 6, y: -8}
-    Sprite: {fileID: 6785028972473229031, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: 6785028972473229031, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -6412,7 +6449,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 8, y: -8}
-    Sprite: {fileID: 1611802837339211158, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: 1611802837339211158, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -6466,7 +6504,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 7, y: -7}
-    Sprite: {fileID: 6435101608598299951, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: 6435101608598299951, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -6871,7 +6910,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 0, y: 12}
-    Sprite: {fileID: -1599222074695836703, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -1599222074695836703, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -6979,7 +7019,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -2, y: 12}
-    Sprite: {fileID: 3412340275108458791, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: 3412340275108458791, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -7060,7 +7101,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 2, y: 12}
-    Sprite: {fileID: -8489321040709604124, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -8489321040709604124, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -7195,7 +7237,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 6, y: 13}
-    Sprite: {fileID: -6755643376888039831, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -6755643376888039831, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -7303,7 +7346,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 6, y: 11}
-    Sprite: {fileID: 3941948186986737496, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: 3941948186986737496, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -7411,7 +7455,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 6, y: 15}
-    Sprite: {fileID: -4298306793728516231, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -4298306793728516231, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -7519,7 +7564,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 10, y: 11}
-    Sprite: {fileID: -6399861423333123127, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -6399861423333123127, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -7654,7 +7700,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 10, y: 15}
-    Sprite: {fileID: -7520349544260831245, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: -7520349544260831245, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -7870,7 +7917,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: 14, y: 11}
-    Sprite: {fileID: 7783693668955549748, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    Sprite: {fileID: 7783693668955549748, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     TileID: 2
     UseDefaultSettings: 1
     IsModified: 0
@@ -8356,7 +8404,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -16, y: 5}
-    Sprite: {fileID: -4209556597541047147, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: -4209556597541047147, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -8410,7 +8459,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -16, y: 7}
-    Sprite: {fileID: 4237310540275773567, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: 4237310540275773567, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -8491,7 +8541,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -15, y: 6}
-    Sprite: {fileID: -8883485803396988322, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: -8883485803396988322, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -8545,7 +8596,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -14, y: 5}
-    Sprite: {fileID: -7073761113175812397, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: -7073761113175812397, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -8572,7 +8624,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -14, y: 7}
-    Sprite: {fileID: -551251681027599768, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: -551251681027599768, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -8815,7 +8868,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -10, y: -1}
-    Sprite: {fileID: -3627413541281560945, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: -3627413541281560945, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -8842,7 +8896,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -8, y: -1}
-    Sprite: {fileID: -4130345186051284111, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: -4130345186051284111, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -8869,7 +8924,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -10, y: 1}
-    Sprite: {fileID: -6408702460779881907, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: -6408702460779881907, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -8896,7 +8952,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -8, y: 1}
-    Sprite: {fileID: 2778475774059628014, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: 2778475774059628014, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -9301,7 +9358,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -16, y: -1}
-    Sprite: {fileID: 6051432521013152299, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: 6051432521013152299, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -9328,7 +9386,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -14, y: -1}
-    Sprite: {fileID: 8857872619646109722, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: 8857872619646109722, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -9355,7 +9414,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -16, y: 1}
-    Sprite: {fileID: 3718988504476089320, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: 3718988504476089320, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -9382,7 +9442,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -14, y: 1}
-    Sprite: {fileID: 5599645972846034142, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: 5599645972846034142, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -9814,7 +9875,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -8, y: 11}
-    Sprite: {fileID: 6987555163684827359, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: 6987555163684827359, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -10084,7 +10146,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -12, y: 11}
-    Sprite: {fileID: -4973363661573341546, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: -4973363661573341546, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -10300,7 +10363,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -10, y: 7}
-    Sprite: {fileID: 5988592372020549448, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: 5988592372020549448, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -10354,7 +10418,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -10, y: 5}
-    Sprite: {fileID: 1887494081247492234, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: 1887494081247492234, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -10408,7 +10473,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -8, y: 5}
-    Sprite: {fileID: -5091828049805951605, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: -5091828049805951605, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -10462,7 +10528,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -8, y: 7}
-    Sprite: {fileID: -5017572320089744931, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: -5017572320089744931, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -10975,7 +11042,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -22, y: 1}
-    Sprite: {fileID: -3918736399999769033, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: -3918736399999769033, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -11002,7 +11070,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -20, y: 1}
-    Sprite: {fileID: -3765185143067902431, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: -3765185143067902431, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -11029,7 +11098,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -22, y: -1}
-    Sprite: {fileID: -2942066654525181778, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: -2942066654525181778, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -11056,7 +11126,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -20, y: -1}
-    Sprite: {fileID: 2465922774173667531, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: 2465922774173667531, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -11677,7 +11748,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -21, y: 5}
-    Sprite: {fileID: -5342935890121459157, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: -5342935890121459157, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -11731,7 +11803,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -22, y: 6}
-    Sprite: {fileID: 8555942595556936778, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: 8555942595556936778, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -11785,7 +11858,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -20, y: 6}
-    Sprite: {fileID: -4354885203342741706, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: -4354885203342741706, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -11839,7 +11913,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -21, y: 7}
-    Sprite: {fileID: 5520127769290878414, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: 5520127769290878414, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -12244,7 +12319,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -19, y: 11}
-    Sprite: {fileID: 9019416115260902278, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: 9019416115260902278, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -12298,7 +12374,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -18, y: 12}
-    Sprite: {fileID: 2007986136508003152, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: 2007986136508003152, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -12352,7 +12429,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -17, y: 11}
-    Sprite: {fileID: -2427098341007487093, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: -2427098341007487093, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -12406,7 +12484,8 @@ MonoBehaviour:
     - {x: 0, y: -1, z: 0}
     - {x: 1, y: -1, z: 0}
   - Position: {x: -18, y: 10}
-    Sprite: {fileID: 4937254120207176121, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    Sprite: {fileID: 4937254120207176121, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     TileID: 1
     UseDefaultSettings: 1
     IsModified: 0
@@ -12575,7 +12654,8 @@ MonoBehaviour:
     TextureShape: 0
     MirrorTexX: 0
     MirrorTexY: 0
-    DefaultSprite: {fileID: -6399861423333123127, guid: 1fee0be3f64a97b4bae35855cf5f2c71, type: 3}
+    DefaultSprite: {fileID: -6399861423333123127, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
+      type: 3}
     ColliderType: 1
     DefaultGameObject: {fileID: 0}
     uniqueTile: 0
@@ -12589,7 +12669,8 @@ MonoBehaviour:
     TextureShape: 0
     MirrorTexX: 0
     MirrorTexY: 0
-    DefaultSprite: {fileID: -1677260544633098824, guid: 4c6fc700f62d57c4eb13ecd00370204b, type: 3}
+    DefaultSprite: {fileID: -1677260544633098824, guid: 4c6fc700f62d57c4eb13ecd00370204b,
+      type: 3}
     ColliderType: 1
     DefaultGameObject: {fileID: 0}
     uniqueTile: 1

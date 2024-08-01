@@ -536,7 +536,7 @@ namespace PixelCrushers.QuestMachine
             {
                 if (players[i].GetComponent<QuestListContainer>() != null) return players[i];
             }
-            var journal = FindObjectOfType<QuestJournal>(); // In case designer forgot to tag player as Player.
+            var journal = GameObjectUtility.FindFirstObjectByType<QuestJournal>(); // In case designer forgot to tag player as Player.
             return (journal != null) ? journal.gameObject : null;
         }
 
@@ -553,7 +553,7 @@ namespace PixelCrushers.QuestMachine
             }
             var player = GameObject.FindGameObjectWithTag("Player");
             if (player != null) return player;
-            var journal = FindObjectOfType<QuestJournal>(); // In case designer forgot to tag player as Player, find a QuestJournal.
+            var journal = GameObjectUtility.FindFirstObjectByType<QuestJournal>(); // In case designer forgot to tag player as Player, find a QuestJournal.
             return (journal != null) ? journal.gameObject : null;
         }
 
@@ -789,7 +789,18 @@ namespace PixelCrushers.QuestMachine
 
         protected virtual void ShowCompletedQuest()
         {
-            questDialogueUI.ShowCompletedQuest(myQuestGiverTextInfo, completedQuests);
+            if (completedQuests != null)
+            {
+                foreach (var quest in completedQuests)
+                {
+                    if (quest == null) continue;
+                    var content = quest.GetContentList(QuestContentCategory.Dialogue);
+                    if (content.Count == 0) continue;
+                    questDialogueUI.ShowCompletedQuest(myQuestGiverTextInfo, completedQuests);
+                    return;
+                }
+            }
+            ShowNoQuestsToDiscuss();
         }
 
         protected virtual void ShowCompletedQuest(Quest quest)

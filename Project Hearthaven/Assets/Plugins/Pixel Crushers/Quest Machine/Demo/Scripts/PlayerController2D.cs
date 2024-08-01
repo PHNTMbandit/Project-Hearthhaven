@@ -156,7 +156,7 @@ namespace PixelCrushers.QuestMachine.Demo
         private void Interact()
         {
             CleanTargetList();
-            var inventory = FindObjectOfType<DemoInventory>();
+            var inventory = GameObjectUtility.FindFirstObjectByType<DemoInventory>();
             for (int i = 0; i < m_targets.Count; i++)
             {
                 if (inventory.usingIndex != -1)

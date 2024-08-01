@@ -40,6 +40,7 @@ MonoBehaviour:
   _imageObjects: []
   _tileObjects:
   - {fileID: 1422357396726750172}
+  _hexTileObjects: []
   _grid:
   - Position: {x: 14, y: 8}
     Sprite: {fileID: 8935116391671119923, guid: 1fee0be3f64a97b4bae35855cf5f2c71,
@@ -18875,4 +18876,5 @@ MonoBehaviour:
     m_Patternsize: {x: 1, y: 1}
   - m_ExtendedOutputSprite: 0
     m_Patternsize: {x: 1, y: 1}
-  DebugMode: 0
+  HasVariations: 0
+  HasExtraTilingRules: 0

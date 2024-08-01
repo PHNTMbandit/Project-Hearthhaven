@@ -49,6 +49,7 @@ namespace PixelCrushers.QuestMachine
 
         private void OnDrawHeader(Rect rect)
         {
+            QuestEditorUtility.ConsumeContextClickInRect(rect);
             EditorGUI.LabelField(rect, m_guiContent);
         }
 

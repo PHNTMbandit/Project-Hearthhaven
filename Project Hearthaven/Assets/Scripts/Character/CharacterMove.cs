@@ -10,9 +10,6 @@ namespace ProjectHearthaven.Character
         [BoxGroup("Settings"), Range(0, 10), SerializeField]
         private float _walkSpeed;
 
-        [BoxGroup("References"), SerializeField]
-        private InputReader _inputReader;
-
         private Animator[] _animators;
         private Rigidbody2D _rb;
 
@@ -22,15 +19,15 @@ namespace ProjectHearthaven.Character
             _rb = GetComponent<Rigidbody2D>();
         }
 
-        public void Move()
+        public void Move(Vector2 input)
         {
             for (int i = 0; i < _animators.Length; i++)
             {
-                Vector2 movement = new(_inputReader.MoveInput.x, _inputReader.MoveInput.y);
+                Vector2 movement = new(input.x, input.y);
                 _rb.MovePosition(_rb.position + _walkSpeed * Time.fixedDeltaTime * movement);
 
-                _animators[i].SetFloat("move x", _inputReader.MoveInput.x);
-                _animators[i].SetFloat("move y", _inputReader.MoveInput.y);
+                _animators[i].SetFloat("move x", input.x);
+                _animators[i].SetFloat("move y", input.y);
             }
         }
     }

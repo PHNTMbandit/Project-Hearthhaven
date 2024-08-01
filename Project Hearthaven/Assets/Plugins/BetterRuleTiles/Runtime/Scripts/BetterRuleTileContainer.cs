@@ -92,7 +92,8 @@ namespace VinTools.BetterRuleTiles
             public Sprite Sprite;
             public int TileID;
             public bool UseDefaultSettings = true;
-            public bool IsModified;
+            public bool AreNeighborPositionsModified;
+            public bool AreOutputSpritesModified;
             public bool Locked = false;
 
             public bool _overrideUniversalSpriteSettings = false;
@@ -131,7 +132,7 @@ namespace VinTools.BetterRuleTiles
                     Sprite = copy.Sprite,
                     TileID = copy.TileID,
                     UseDefaultSettings = copy.UseDefaultSettings,
-                    IsModified = copy.IsModified,
+                    AreNeighborPositionsModified = copy.AreNeighborPositionsModified,
                     Locked = copy.Locked,
 
                     Sprites = copy.Sprites,
@@ -152,13 +153,8 @@ namespace VinTools.BetterRuleTiles
                 };
             }
 
-            public bool CheckModified()
+            public bool CheckModifiedNeighborPositions()
             {
-                if (!UseDefaultSettings)
-                {
-                    if (ColliderType != Tile.ColliderType.Sprite) return true;
-                    if (OutputSprite != ExtendedOutputSprite.Single) return true;
-                }
                 if (Transform != RuleTile.TilingRuleOutput.Transform.Fixed) return true;
 
                 //TODO Maybe count for hexagonal tiles
@@ -167,6 +163,15 @@ namespace VinTools.BetterRuleTiles
                 if (NeighborPositions.Max(t => t.x) < -1) return true;
                 if (NeighborPositions.Min(t => t.y) > 1) return true;
                 if (NeighborPositions.Max(t => t.y) > 1) return true;
+
+                return false;
+            }
+
+            public bool CheckModifiedOutput()
+            {
+                if (!UseDefaultSettings || ColliderType != Tile.ColliderType.Sprite) return true;
+                if (OutputSprite != ExtendedOutputSprite.Single) return true;
+                if (Sprites.Length > 1) return true;
 
                 return false;
             }
@@ -205,6 +210,7 @@ namespace VinTools.BetterRuleTiles
             //public bool _addMissingRules = true;
             public bool _collapseSimilarRules = false;
             public bool _useUniversalSpriteSettings = false;
+            public bool _treatSimilarTilesAsSame = false;
 
             public Color _presetBlockColor = new Color(255 / 255f, 147 / 255f, 15 / 255f);
 
@@ -1030,7 +1036,7 @@ namespace VinTools.BetterRuleTiles
 
             foreach (var item in _grid)
             {
-                if (!item.IsModified) item.NeighborPositions = DefaultNeighborPositions(to, item.Position);
+                if (!item.AreNeighborPositionsModified) item.NeighborPositions = DefaultNeighborPositions(to, item.Position);
             }
             settings._gridShape = to;
 

@@ -1,3 +1,6 @@
+using System;
+using UnityEngine;
+
 namespace ProjectHearthaven.Vehicles.Train.States
 {
     public class TrainArrivedState : TrainState
@@ -13,6 +16,26 @@ namespace ProjectHearthaven.Vehicles.Train.States
             {
                 stateController.Doors[i].Open();
             }
+
+            if (
+                stateController.Player.StateMachine.CurrentState
+                == stateController.Player.OnTrainState
+            )
+            {
+                stateController.Player.transform.position =
+                    Array.Find(stateController.Doors, i => i.HasPlayer == true).transform.position
+                    + new Vector3(0, 3);
+                stateController.Player.StateMachine.ChangeState(
+                    stateController.Player.ExitTrainState
+                );
+
+                stateController.Invoke(nameof(DepartTrain), 2);
+            }
+        }
+
+        private void DepartTrain()
+        {
+            stateController.StateMachine.ChangeState(stateController.DepartingState);
         }
     }
 }

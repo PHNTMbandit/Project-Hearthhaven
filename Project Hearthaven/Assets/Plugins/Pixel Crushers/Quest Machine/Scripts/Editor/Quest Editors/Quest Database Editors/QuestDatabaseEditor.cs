@@ -29,7 +29,7 @@ namespace PixelCrushers.QuestMachine
         protected virtual void OnEnable()
         {
             Undo.undoRedoPerformed += RepaintEditorWindow;
-            QuestEditorWindow.currentEditor = this;
+            QuestEditorWindow.currentInspectors.Add(this);
             questReorderableList = new ReorderableList(serializedObject, serializedObject.FindProperty("m_questAssets"), true, true, true, true);
             questReorderableList.drawHeaderCallback = OnDrawHeader;
             questReorderableList.onSelectCallback = OnChangeSelection;
@@ -42,7 +42,7 @@ namespace PixelCrushers.QuestMachine
         protected virtual void OnDisable()
         {
             Undo.undoRedoPerformed -= RepaintEditorWindow;
-            QuestEditorWindow.currentEditor = null;
+            QuestEditorWindow.currentInspectors.Remove(this);
         }
 
         protected void RepaintEditorWindow()
@@ -206,7 +206,7 @@ namespace PixelCrushers.QuestMachine
             var database = target as QuestDatabase;
             if (database == null) return;
             Undo.RecordObject(database, "Add Quests In Scene");
-            foreach (var questListContainer in FindObjectsOfType<QuestListContainer>())
+            foreach (var questListContainer in GameObjectUtility.FindObjectsByType<QuestListContainer>())
             {
                 foreach (var quest in questListContainer.questList)
                 {
@@ -255,7 +255,7 @@ namespace PixelCrushers.QuestMachine
             }
             EditorUtility.SetDirty(textTable);
             QuestEditorWindow.RepaintNow();
-            QuestEditorWindow.RepaintCurrentEditorNow();
+            QuestEditorWindow.RepaintInspectorsNow();
             if (TextTableEditorWindow.instance != null)
             {
                 Selection.activeObject = null;

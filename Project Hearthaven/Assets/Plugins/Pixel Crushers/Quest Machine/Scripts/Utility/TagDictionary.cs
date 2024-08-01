@@ -81,7 +81,7 @@ namespace PixelCrushers.QuestMachine
         {
             foreach (var kvp in dict)
             {
-                if (!other.dict.ContainsKey(kvp.Key)) other.dict.Add(kvp.Key, kvp.Value);
+                other.dict[kvp.Key] = kvp.Value;
             }
         }
 

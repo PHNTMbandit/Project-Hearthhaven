@@ -24,11 +24,11 @@
             {
                 case DemoInventory.ItemType.Carrot:
                     counter = quest.GetCounter("carrots");
-                    if (counter != null) counter.currentValue = FindObjectOfType<DemoInventory>().GetItemCount((int)itemType);
+                    if (counter != null) counter.currentValue = GameObjectUtility.FindFirstObjectByType<DemoInventory>().GetItemCount((int)itemType);
                     break;
                 case DemoInventory.ItemType.Coin:
                     counter = quest.GetCounter("coins");
-                    if (counter != null) counter.currentValue = FindObjectOfType<DemoInventory>().GetItemCount((int)itemType);
+                    if (counter != null) counter.currentValue = GameObjectUtility.FindFirstObjectByType<DemoInventory>().GetItemCount((int)itemType);
                     break;
             }
         }

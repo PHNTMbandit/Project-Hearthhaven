@@ -36,6 +36,7 @@ namespace PixelCrushers.QuestMachine
         public QuestConditionSetProxy offerConditionSet;
         public QuestContentProxy[] offerUnmetContentList;
         public QuestContentProxy[] offerContentList;
+        public bool infinitelyRepeatable;
         public int maxTimes;
         public int timesAccepted;
         public float cooldownSecs;
@@ -77,6 +78,7 @@ namespace PixelCrushers.QuestMachine
             offerConditionSet = new QuestConditionSetProxy(quest.offerConditionSet);
             offerUnmetContentList = QuestContentProxy.NewArray(quest.offerConditionsUnmetContentList);
             offerContentList = QuestContentProxy.NewArray(quest.offerContentList);
+            infinitelyRepeatable = quest.infinitelyRepeatable;
             maxTimes = quest.maxTimes;
             timesAccepted = quest.timesAccepted;
             cooldownSecs = quest.cooldownSeconds;
@@ -112,6 +114,7 @@ namespace PixelCrushers.QuestMachine
             quest.offerConditionSet = offerConditionSet.CreateConditionSet();
             quest.offerConditionsUnmetContentList = QuestContentProxy.CreateList(offerUnmetContentList);
             quest.offerContentList = QuestContentProxy.CreateList(offerContentList);
+            quest.infinitelyRepeatable = infinitelyRepeatable;
             quest.maxTimes = maxTimes;
             quest.timesAccepted = timesAccepted;
             quest.UpdateCooldown();

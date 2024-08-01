@@ -61,7 +61,7 @@ namespace PixelCrushers.QuestMachine.Demo
 
         private bool HaveWand()
         {
-            var demoInventory = FindObjectOfType<DemoInventory>();
+            var demoInventory = GameObjectUtility.FindFirstObjectByType<DemoInventory>();
             if (demoInventory == null) return false;
             return demoInventory.GetItemCount(DemoInventory.WandSlot) > 0;
         }

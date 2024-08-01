@@ -1738,7 +1738,8 @@ namespace VinToolsEditor.BetterRuleTiles
             EditorGUILayout.EndScrollView();
 
             //check if it was modified
-            _inspectingCell.IsModified = _inspectingCell.CheckModified();
+            _inspectingCell.AreNeighborPositionsModified = _inspectingCell.CheckModifiedNeighborPositions();
+            _inspectingCell.AreOutputSpritesModified = _inspectingCell.CheckModifiedOutput();
 
             //lock position
             _windows[windowID].lockPosition = _lockWindows;
@@ -1914,6 +1915,7 @@ namespace VinToolsEditor.BetterRuleTiles
             //_file.settings._addMissingRules = EditorGUILayout.Toggle(new GUIContent("Add missing rules", "In tiles which are variations of another tile, should the missing rules be added from the parent tile?"), _file.settings._addMissingRules);
             _file.settings._collapseSimilarRules = EditorGUILayout.Toggle(new GUIContent("Simplify similar rules", "Checks tiles which have the same sprite, finds a common pattern between them and replaces them with one rule that applies for all"), _file.settings._collapseSimilarRules);
             _file.settings._useUniversalSpriteSettings = EditorGUILayout.Toggle(new GUIContent("Universal sprite settings", "With this setting enabled, all rules which have the same output sprite will use the same output settings, so you don't have to individually set them. A new window will be enabled with this option"), _file.settings._useUniversalSpriteSettings);
+            _file.settings._treatSimilarTilesAsSame = EditorGUILayout.Toggle(new GUIContent("Treat similar tiles as same", "With this option enabled, when setting up a tiling rule to a tile that is set up to automatically connect to other tiles, the automatically connected tiles will be treated as if it was that same tile in the tiling rules"), _file.settings._treatSimilarTilesAsSame);
 
             EditorGUILayout.Space();
 

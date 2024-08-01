@@ -41,7 +41,7 @@ namespace PixelCrushers.QuestMachine
         /// also need to request the inspector to update its display. When an inspector becomes
         /// active, it sets this property.
         /// </summary>
-        public static Editor currentEditor { get; set; }
+        public static HashSet<Editor> currentInspectors { get; set; } = new HashSet<Editor>();
 
         /// <summary>
         /// The quest currently selected for editing.
@@ -89,9 +89,13 @@ namespace PixelCrushers.QuestMachine
             if (m_instance != null) m_instance.Repaint();
         }
 
-        public static void RepaintCurrentEditorNow()
+        public static void RepaintInspectorsNow()
         {
-            if (currentEditor != null) currentEditor.Repaint();
+            foreach (var inspector in currentInspectors)
+            {
+                if (inspector == null) continue;
+                inspector.Repaint();
+            }
         }
 
         public static void SetSelectionToQuest()
@@ -375,7 +379,7 @@ namespace PixelCrushers.QuestMachine
         {
             CheckCurrentRuntimeSelection();
             RepaintNow();
-            RepaintCurrentEditorNow();
+            RepaintInspectorsNow();
         }
 
         private void CheckCurrentRuntimeSelection()

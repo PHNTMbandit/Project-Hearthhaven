@@ -166,7 +166,7 @@ namespace PixelCrushers.QuestMachine
             var define_USE_NEW_INPUT = false;
             var define_TMP_PRESENT = false;
             var define_USE_STM = false;
-            var defines = PlayerSettings.GetScriptingDefineSymbolsForGroup(EditorUserBuildSettings.selectedBuildTargetGroup).Split(';');
+            var defines = MoreEditorUtility.GetScriptingDefineSymbolsForGroup(EditorUserBuildSettings.selectedBuildTargetGroup).Split(';');
             for (int i = 0; i < defines.Length; i++)
             {
                 if (string.Equals(USE_PHYSICS2D, defines[i].Trim())) define_USE_PHYSICS2D = true;

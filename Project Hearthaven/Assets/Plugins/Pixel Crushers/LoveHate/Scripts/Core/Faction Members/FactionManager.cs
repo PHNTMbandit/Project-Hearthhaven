@@ -580,13 +580,30 @@ namespace PixelCrushers.LoveHate
             // Get faction count:
             var factionCount = SafeConvert.ToInt(data.Dequeue());
 
-            for (int f = 0; f < Mathf.Min(factionCount, factionDatabase.factions.Length); f++)
+            // If we have more serialized factions than in database, expand database:
+            if (factionCount > factionDatabase.factions.Length)
+            {
+                var newList = new List<Faction>(factionDatabase.factions);
+                var numFactionsToAdd = factionCount - factionDatabase.factions.Length;
+                for (int i = 0; i < numFactionsToAdd; i++)
+                {
+                    newList.Add(new Faction());
+                }
+                factionDatabase.factions = newList.ToArray();
+            }
+
+            for (int f = 0; f < factionCount; f++)
             {
                 var faction = factionDatabase.factions[f];
 
                 // Get faction ID and name:
-                faction.id = SafeConvert.ToInt(data.Dequeue());
+                // Note: To keep serialization format unchanged, we don't serialize description.
+                //       If faction ID is different, we clear description in database.
+                var factionID = SafeConvert.ToInt(data.Dequeue());
+                var isSameFactionID = factionID == faction.id;
+                faction.id = factionID;
                 faction.name = SafeConvert.FromSerializedElement(data.Dequeue());
+                if (!isSameFactionID) faction.description = string.Empty;
 
                 // Get faction personality trait values:
                 for (int p = 0; p < faction.traits.Length; p++)

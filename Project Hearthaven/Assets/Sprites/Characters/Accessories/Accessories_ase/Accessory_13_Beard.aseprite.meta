@@ -232,6 +232,7 @@ ScriptedImporter:
     cells:
     - name: Accessory_13_Beard_Frame_0
       frameIndex: 0
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 21
@@ -240,6 +241,7 @@ ScriptedImporter:
       spriteId: 6caaac472020a7143bc43894c1f2b495
     - name: Accessory_13_Beard_Frame_1
       frameIndex: 1
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 21
@@ -248,6 +250,7 @@ ScriptedImporter:
       spriteId: 82b5436abf3d4634aa0fbd66970146e8
     - name: Accessory_13_Beard_Frame_2
       frameIndex: 2
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 21
@@ -256,6 +259,7 @@ ScriptedImporter:
       spriteId: 2a2cd02f3ae752e44bb2e4884545004c
     - name: Accessory_13_Beard_Frame_3
       frameIndex: 3
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 21
@@ -264,6 +268,7 @@ ScriptedImporter:
       spriteId: 977e0d906339f804b9f8f576bd6d9460
     - name: Accessory_13_Beard_Frame_4
       frameIndex: 4
+      additiveSortOrder: 0
       cellRect:
         x: 3
         y: 21

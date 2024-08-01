@@ -21,6 +21,12 @@ namespace ProjectHearthaven.Character
 
         public UnityEvent onInteract;
 
+        private void Awake()
+        {
+            _sensor.OnDetected.AddListener(OnDetected);
+            _sensor.OnLostDetection.AddListener(OnLost);
+        }
+
         private void Update()
         {
             var interactable = _sensor.GetNearestComponent<Interactable>();
@@ -39,6 +45,22 @@ namespace ProjectHearthaven.Character
             else
             {
                 _interactorUI.HideUI();
+            }
+        }
+
+        public void OnDetected(GameObject gameObject, Sensor sensor)
+        {
+            if (gameObject.TryGetComponent(out Interactable interactable))
+            {
+                interactable.OnDetected(gameObject);
+            }
+        }
+
+        public void OnLost(GameObject gameObject, Sensor sensor)
+        {
+            if (gameObject.TryGetComponent(out Interactable interactable))
+            {
+                interactable.OnLost(gameObject);
             }
         }
 

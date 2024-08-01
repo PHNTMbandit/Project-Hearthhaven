@@ -51,7 +51,7 @@ namespace PixelCrushers.QuestMachine.Demo
         {
             base.Start();
             // Tell quest generators about our inventory:
-            foreach (var generator in FindObjectsOfType<QuestGeneratorEntity>())
+            foreach (var generator in GameObjectUtility.FindObjectsByType<QuestGeneratorEntity>())
             {
                 generator.updateWorldModel += OnUpdateWorldModel;
             }
