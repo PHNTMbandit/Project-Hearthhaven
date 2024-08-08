@@ -1,6 +1,5 @@
 using System;
 using Sirenix.OdinInspector;
-using UnityEditor;
 using UnityEngine;
 
 namespace ProjectHearthaven.Data
@@ -9,7 +8,7 @@ namespace ProjectHearthaven.Data
     public class Station
     {
         public string stationName;
-        public SceneAsset scene;
+        public string sceneName;
 
         [Range(0, 100), SuffixLabel("dollars")]
         public int cost;

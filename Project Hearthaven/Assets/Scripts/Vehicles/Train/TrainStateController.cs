@@ -124,7 +124,7 @@ namespace ProjectHearthaven.Vehicles.Train
             if (Destination != null)
             {
                 InGameClockController.AddMinutesToClock(Destination.travelTime);
-                SaveSystem.LoadScene(Destination.scene.name);
+                SaveSystem.LoadScene(Destination.sceneName);
             }
             else
             {

@@ -89618,18 +89618,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1394489647522999497, guid: bc05fdd3279530847abcdb606547a283, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1394489647522999497, guid: bc05fdd3279530847abcdb606547a283, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1394489647522999497, guid: bc05fdd3279530847abcdb606547a283, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -2121235649
-      objectReference: {fileID: 0}
     - target: {fileID: 3554382741119788663, guid: bc05fdd3279530847abcdb606547a283, type: 3}
       propertyPath: m_Camera
       value: 
@@ -89641,26 +89629,6 @@ PrefabInstance:
     - target: {fileID: 3773726513736863238, guid: bc05fdd3279530847abcdb606547a283, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465297473583490287, guid: bc05fdd3279530847abcdb606547a283, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465297473583490287, guid: bc05fdd3279530847abcdb606547a283, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4465297473583490287, guid: bc05fdd3279530847abcdb606547a283, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -2121235649
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697657664774489378, guid: bc05fdd3279530847abcdb606547a283, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4697657664774489378, guid: bc05fdd3279530847abcdb606547a283, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -2121235649
       objectReference: {fileID: 0}
     - target: {fileID: 6566727372842973157, guid: bc05fdd3279530847abcdb606547a283, type: 3}
       propertyPath: m_Camera
@@ -89705,18 +89673,6 @@ PrefabInstance:
     - target: {fileID: 7862034438557370233, guid: bc05fdd3279530847abcdb606547a283, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8087333440490635857, guid: bc05fdd3279530847abcdb606547a283, type: 3}
-      propertyPath: m_SortingLayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8087333440490635857, guid: bc05fdd3279530847abcdb606547a283, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8087333440490635857, guid: bc05fdd3279530847abcdb606547a283, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -2121235649
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
